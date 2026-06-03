@@ -1,8 +1,8 @@
-<a href="https://ctafsiras.vercel.app" target="_blank">
-<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611753823050/dkIXQmaxF.png?auto=compress,format&format=webp" alt="ctafsiras GitHub README header image">
+<a href="https://tafsir.qom.bd" target="_blank">
+<img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1611753823050/dkIXQmaxF.png?auto=compress,format&format=webp" alt="tafsirc GitHub README header image">
 </a>
 
-## Hi, I'm Chowdhury Tafsir Ahmed Siddiki
+## Hi, I'm Tafsir Chowdhury
 
 An IBM Certified Full Stack Developer, passionate about continuous learning, exploring new technologies, and creating innovative solutions to solve real-world problems. Currently working as a Full Stack Developer at Standard Insights, building scalable web applications with Next.js, TypeScript, Express.js, and cloud services.
 
@@ -14,17 +14,17 @@ I build production-grade full stack web applications -- from ecommerce platforms
 
 <div align="center">
 
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/ctafsiras) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/ctafsiras) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ctafsiras) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/ctafsiras) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:ctafsiras@gmail.com)
+[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/tafsirc) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/taf_sir_c) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tafsirc) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/tafsirc) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tafsirc@gmail.com)
 
 </div>
 
 ## Graph Stats:
 
 <p align="center">
-  <img alig src="https://github-profile-trophy.vercel.app/?username=ctafsiras&theme=onedark&column=-1" />
+  <img alig src="https://github-profile-trophy.vercel.app/?username=tafsirc&theme=onedark&column=-1" />
 </p>
 
-[![activity graph](https://github-readme-activity-graph.vercel.app/graph?username=ctafsiras&theme=github-dark-dimmed&custom_title=Tafsir's%20Activity%20Graph&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
+[![activity graph](https://github-readme-activity-graph.vercel.app/graph?username=tafsirc&theme=github-dark-dimmed&custom_title=Tafsir's%20Activity%20Graph&hide_border=true)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 ## Tech Stack:
 
@@ -58,10 +58,10 @@ I build production-grade full stack web applications -- from ecommerce platforms
 
 <div align="center">
 
-![](https://github-readme-stats.vercel.app/api?username=ctafsiras&theme=dark&hide_border=false&include_all_commits=false&count_private=false)
+![](https://github-readme-stats.vercel.app/api?username=tafsirc&theme=dark&hide_border=false&include_all_commits=false&count_private=false)
 
-![](https://github-readme-streak-stats.herokuapp.com/?user=ctafsiras&theme=dark&hide_border=false)
+![](https://github-readme-streak-stats.herokuapp.com/?user=tafsirc&theme=dark&hide_border=false)
 
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=ctafsiras&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+![](https://github-readme-stats.vercel.app/api/top-langs/?username=tafsirc&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
 </div>
