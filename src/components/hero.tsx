@@ -22,15 +22,15 @@ export function Hero() {
       </p>
       <div className="mt-8 flex justify-center gap-4">
         <Button asChild>
-          <a
-            target="_blank"
-            href="/resume.pdf"
-          >
+          <a target="_blank" href="/resume.pdf">
             View Resume
           </a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="/resume.pdf" download="Tafsir_Chowdhury_Resume.pdf">
+          <a
+            href="/resume.pdf"
+            download="Tafsir_Chowdhury-Full_Stack_AI_Engineer.pdf"
+          >
             Download Resume
           </a>
         </Button>
