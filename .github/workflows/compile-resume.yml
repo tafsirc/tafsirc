@@ -18,14 +18,14 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Tectonic
-        uses: wtfjoke/setup-tectonic@v3
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-
       - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: resume.tex
+          compiler: pdflatex
+
+      - name: Move PDF to public folder
         run: |
-          tectonic resume.tex
           mkdir -p public
           mv resume.pdf public/resume.pdf
 
@@ -33,4 +33,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto-compile resume.tex to public/resume.pdf [skip ci]"
-          file_pattern: "public/resume.pdf"
+          file_pattern: 'public/resume.pdf'
