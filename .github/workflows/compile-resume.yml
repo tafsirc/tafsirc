@@ -1,0 +1,36 @@
+name: Compile Resume
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume.tex'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Tectonic
+        uses: wtfjoke/setup-tectonic@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Compile LaTeX document
+        run: |
+          tectonic resume.tex
+          mkdir -p public
+          mv resume.pdf public/resume.pdf
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto-compile resume.tex to public/resume.pdf [skip ci]"
+          file_pattern: 'public/resume.pdf'

@@ -24,13 +24,13 @@ export function Hero() {
         <Button asChild>
           <a
             target="_blank"
-            href="https://drive.google.com/file/d/1kNpOqud5V7HCxpAnoq9qzocPyb3ygOaXYb3ZE9ID0AI/preview"
+            href="/resume.pdf"
           >
             View Resume
           </a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="https://docs.google.com/document/d/1kNpOqud5V7HCxpAnoq9qzocPyb3ygOaXYb3ZE9ID0AI/export?format=pdf">
+          <a href="/resume.pdf" download="Tafsir_Chowdhury_Resume.pdf">
             Download Resume
           </a>
         </Button>
