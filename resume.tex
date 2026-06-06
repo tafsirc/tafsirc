@@ -12,10 +12,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{multicol}
-\ifx\pdfgentounicode\undefined
-\else
-  \input{glyphtounicode}
-\fi
+\input{glyphtounicode}
 
 \usepackage{helvet}
 \renewcommand{\familydefault}{\sfdefault}
@@ -41,10 +38,7 @@
   \vspace{-4pt}\scshape\raggedright\large\bfseries
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
-\ifx\pdfgentounicode\undefined
-\else
-  \pdfgentounicode=1
-\fi
+\pdfgentounicode=1
 
 \newcommand{\resumeItem}[1]{
   \item\normalsize{#1 \vspace{-2pt}}
