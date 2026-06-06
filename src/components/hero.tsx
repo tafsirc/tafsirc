@@ -24,13 +24,13 @@ export function Hero() {
         <Button asChild>
           <a
             target="_blank"
-            href="/Tafsir_Chowdhury_Resume.pdf"
+            href="/resume.pdf"
           >
             View Resume
           </a>
         </Button>
         <Button variant="outline" asChild>
-          <a href="/Tafsir_Chowdhury_Resume.pdf" download>
+          <a href="/resume.pdf" download="Tafsir_Chowdhury_Resume.pdf">
             Download Resume
           </a>
         </Button>
