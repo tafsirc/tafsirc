@@ -27,10 +27,10 @@ jobs:
       - name: Move PDF to public folder
         run: |
           mkdir -p public
-          mv resume.pdf public/resume.pdf
+          mv resume.pdf public/Tafsir_Chowdhury_Resume.pdf
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto-compile resume.tex to public/resume.pdf [skip ci]"
-          file_pattern: 'public/resume.pdf'
+          commit_message: "chore: auto-compile resume.tex to public/Tafsir_Chowdhury_Resume.pdf [skip ci]"
+          file_pattern: 'public/Tafsir_Chowdhury_Resume.pdf'
