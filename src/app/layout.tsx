@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import ScrollTracker from "@/components/scroll-tracker";
+import { Analytics } from "@vercel/analytics/next";
 
 const font = Font({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -32,6 +33,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
