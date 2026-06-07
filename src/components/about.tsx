@@ -6,11 +6,16 @@ export function About() {
       <h2 className="text-3xl font-bold text-center mb-8">About Me</h2>
       <Card>
         <CardHeader>
-          <CardTitle>A Dedicated Full Stack Developer</CardTitle>
+          <CardTitle>Full Stack AI Engineer</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground text-justify">
-            A software engineer currently working as a Full Stack Developer at Standard Insights. I studied Computer Science at University of the People and hold IBM certification as a Full Stack Software Developer, along with Meta certifications in Front-End and Back-End Development. I'm passionate about continuous learning, exploring new technologies, and creating innovative solutions to solve real-life problems.
+            Backend-first Full Stack AI Engineer at Standard Insights, building
+            production-grade applications with TypeScript, Node.js, Next.js, and
+            cloud infrastructure on AWS and Railway. I architect multi-LLM
+            pipelines, distributed worker systems, and scalable REST APIs for
+            global product teams. BSc in Computer Science from University of
+            the People (CGPA 3.67), with IBM and Meta full-stack certifications.
           </p>
         </CardContent>
       </Card>

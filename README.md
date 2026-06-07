@@ -4,17 +4,23 @@
 
 ## Hi, I'm Tafsir Chowdhury
 
-An IBM Certified Full Stack Developer, passionate about continuous learning, exploring new technologies, and creating innovative solutions to solve real-world problems. Currently working as a Full Stack Developer at Standard Insights, building scalable web applications with Next.js, TypeScript, Express.js, and cloud services.
+Backend-first **Full Stack AI Engineer** with 3+ years building production web applications. Currently at **Standard Insights**, architecting multi-LLM pipelines, distributed worker systems, and scalable APIs with TypeScript, Node.js, Next.js, and AWS.
 
 ### What I Work On
 
-I build production-grade full stack web applications -- from ecommerce platforms and SaaS products to AI-powered tools. My day-to-day involves designing RESTful APIs, integrating AI models (OpenAI, Claude, Gemini), managing cloud deployments on AWS and Vercel, and shipping clean, maintainable code with TypeScript across the entire stack.
+I ship production-grade full stack applications — from AI-powered SaaS and consumer intelligence platforms to multi-tenant dashboards and subscription products. Day-to-day work includes durable background job pipelines, RAG and AI agents, REST API design, and cloud deployments on AWS ECS, Railway, and Vercel.
 
-## Socials & Contact:
+### Featured Projects
+
+- [Visual Source](https://my.visualsource.nl/) — Multi-tenant soccer club dashboard with automated matchday graphics and social posting
+- [Everything Green](https://www.everythinggreen.org/) — RAG chatbot, AI SEO engine, and sustainability dashboard
+- [Career Dock](https://careerdock.app/) — Job tracker with Gemini-powered resume and cover letter generation
+
+## Socials & Contact
 
 <div align="center">
 
-[![Facebook](https://img.shields.io/badge/Facebook-%231877F2.svg?logo=Facebook&logoColor=white)](https://facebook.com/tafsirc) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?logo=Instagram&logoColor=white)](https://instagram.com/taf_sir_c) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tafsirc) [![Twitter](https://img.shields.io/badge/Twitter-%231DA1F2.svg?logo=Twitter&logoColor=white)](https://twitter.com/tafsirc) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tafsirc@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tafsirc) [![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/tafsirc) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:ctafsiras@gmail.com)
 
 </div>
 
@@ -30,31 +36,21 @@ I build production-grade full stack web applications -- from ecommerce platforms
 
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=html,css,javascript,ts" />
+    <img src="https://skillicons.dev/icons?i=javascript,ts,nextjs,react,tailwind" />
   </a>
 </p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nextjs,react,tailwind,redux,vite" />
+    <img src="https://skillicons.dev/icons?i=nodejs,express,docker,aws,redis" />
   </a>
 </p>
 <p align="center">
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=nodejs,express,prisma,firebase" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=mongodb,postgresql,mysql,redis" />
-  </a>
-</p>
-<p align="center">
-  <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=git,github,docker,aws,vscode,ubuntu" />
+    <img src="https://skillicons.dev/icons?i=mongodb,postgresql,mysql,git,github" />
   </a>
 </p>
 
-## GitHub Stats:
+## GitHub Stats
 
 <div align="center">
 

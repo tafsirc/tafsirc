@@ -13,8 +13,9 @@ const font = Font({
 });
 
 export const metadata: Metadata = {
-  title: "Chowdhury Tafsir Ahmed Siddiki",
-  description: "Chowdhury Tafsir Ahmed Siddiki's Portfolio Website",
+  title: "Tafsir Chowdhury | Full Stack AI Engineer",
+  description:
+    "Portfolio of Tafsir Chowdhury — Full Stack AI Engineer building multi-LLM pipelines, distributed systems, and production web apps with TypeScript, Node.js, Next.js, and AWS.",
 };
 
 export default function RootLayout({

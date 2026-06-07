@@ -7,32 +7,85 @@ export interface Project {
   features: string[];
   github: string;
   live: string;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
   {
-    slug: "career-dock",
-    title: "Career Dock",
-    description: "Job Application Tracking Web App.",
+    slug: "visual-source",
+    title: "Visual Source",
+    description: "Real-time soccer match operations and social graphic automation.",
     overview:
-      "Career Dock is a comprehensive job application tracking platform built to streamline the job search process. It allows users to manage their job applications, track tasks, and leverage AI-powered suggestions for resumes, LinkedIn profiles, and cover letters. The app features premium subscription support through Lemon Squeezy and secure authentication via Clerk.",
+      "Visual Source is a multi-tenant platform for soccer clubs to manage matchday operations, generate dynamic graphics, and automate social media posting. Built as a production Turborepo monorepo with containerized deployment.",
     technologies: [
       "Next.js",
-      "TypeScript",
-      "Express.js",
+      "Turborepo",
+      "Better Auth",
+      "PostgreSQL",
+      "Fabric.js",
+      "Sharp",
+      "Cloudflare R2",
+      "Docker Compose",
+      "Caddy",
+    ],
+    features: [
+      "Architected a multi-tenant soccer club dashboard with isolated workspaces for multiple sports organizations.",
+      "Engineered a headless canvas rendering pipeline with Fabric.js and Sharp, storing graphics in Cloudflare R2.",
+      "Integrated Facebook, Instagram, and Twitter Graph APIs with polling and media chunking for automated matchday posting.",
+      "Designed a Sportmonks API synchronizer using PostgreSQL advisory locks to prevent write collisions.",
+      "Deployed a containerized stack with Docker Compose, PostgreSQL, Next.js, and Caddy for SSL and reverse proxying.",
+    ],
+    github: "",
+    live: "https://my.visualsource.nl/",
+    featured: true,
+  },
+  {
+    slug: "everything-green",
+    title: "Everything Green",
+    description: "Digital sustainability and SEO platform.",
+    overview:
+      "Everything Green helps businesses measure digital sustainability and improve SEO performance. Features a RAG chatbot, AI-driven SEO recommendations, subscription billing, and interactive data visualizations.",
+    technologies: [
+      "Next.js",
       "MongoDB",
+      "OpenAI",
+      "RAG",
+      "CatBoost",
+      "Stripe",
+      "PayPal",
+      "D3.js",
+    ],
+    features: [
+      "Designed a RAG chatbot with OpenAI embeddings, HTML scraping, semantic chunking, and context-aware query optimization.",
+      "Built an AI SEO engine matching Google Ads suggestions to pages via cosine similarity, with CatBoost conversion classification.",
+      "Implemented subscription billing with Stripe and PayPal, including customer portals, coupons, and webhook validation.",
+      "Built a Next.js dashboard with interactive D3/Sankey visualizations for sustainability metrics.",
+    ],
+    github: "",
+    live: "https://www.everythinggreen.org/",
+    featured: true,
+  },
+  {
+    slug: "career-dock",
+    title: "Career Dock",
+    description: "A modern job tracking application.",
+    overview:
+      "Career Dock is a job application tracker with AI-powered resume, LinkedIn, and cover letter generation using Gemini prompt-chaining workflows.",
+    technologies: [
+      "Next.js",
+      "Express.js",
       "Clerk",
       "Lemon Squeezy",
-      "Gemini AI",
+      "Gemini API",
       "Vercel",
     ],
     features: [
-      "Built an end-to-end Next.js + TypeScript web app with Express.js and MongoDB, supporting job tracking, task management, and premium features with Clerk + Lemon Squeezy.",
-      "Integrated real-time interactive charts and dashboards, using AI (Gemini) to suggest optimized resumes, LinkedIn profiles, and cover letters.",
-      "Architected secure auth flows and subscription logic, following RESTful standards and deploying to Vercel with seamless CI/CD pipeline integration.",
+      "Built an end-to-end Next.js and Express.js application with Clerk authentication, Lemon Squeezy billing, and CI/CD on Vercel.",
+      "Integrated Gemini API prompt-chaining to generate tailored resumes, LinkedIn profiles, and cover letters from job descriptions.",
     ],
     github: "",
-    live: "",
+    live: "https://careerdock.app",
+    featured: true,
   },
   {
     slug: "baby-care-store",
@@ -56,6 +109,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/ctafsiras/baby-care-store",
     live: "https://baby-care-store-three.vercel.app",
+    featured: false,
   },
   {
     slug: "bake-n-treat",
@@ -79,6 +133,7 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/ctafsiras/bake-n-treat",
     live: "https://bake-n-treat.vercel.app",
+    featured: false,
   },
   {
     slug: "legal-fist-exam",
@@ -101,6 +156,7 @@ export const projects: Project[] = [
     ],
     github: "",
     live: "https://exam.legalfist.com",
+    featured: false,
   },
   {
     slug: "mind-the-blog",
@@ -124,5 +180,8 @@ export const projects: Project[] = [
     ],
     github: "https://github.com/ctafsiras/mind-the-blog.git",
     live: "https://mindtheblog.vercel.app",
+    featured: false,
   },
 ];
+
+export const featuredProjects = projects.filter((project) => project.featured);

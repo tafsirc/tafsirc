@@ -9,7 +9,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
-import { projects } from "@/data/projects";
+import { featuredProjects } from "@/data/projects";
 
 const gradients = [
   "from-blue-500 to-indigo-600",
@@ -24,7 +24,7 @@ export function Projects() {
     <section id="projects" className="py-16">
       <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((project, i) => (
+        {featuredProjects.map((project, i) => (
           <Card key={project.slug} className="flex flex-col">
             <CardHeader>
               <div

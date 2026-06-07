@@ -4,35 +4,24 @@ export function Experience() {
   const experiences = [
     {
       company: "Standard Insights",
-      position: "Full Stack Developer",
-      duration: "Oct 24 - Present | Remote | Hong Kong, SAR",
+      position: "Full Stack AI Engineer",
+      duration: "Oct 24 - Present | Remote | New York, USA",
       responsibilities: [
-        "Engineered and shipped production-grade features using Next.js, TypeScript, Node.js, and ShadCN UI, delivering scalable consumer intelligence dashboards with clean, responsive UI/UX.",
-        "Built and optimized RESTful APIs using Express.js, MongoDB, and Mongoose, while leveraging Redis for efficient caching and state handling across sessions and data layers.",
-        "Designed and implemented BullMQ-based worker queues backed by Redis, enabling background task processing with robust error handling and retry logic.",
-        "Integrated Claude AI and OpenAI APIs into the platform to power intelligent summarization, dynamic content generation, and personalized recommendations.",
-        "Deployed containerized services via Docker and managed production environments using AWS ECS, handling CI/CD pipelines and service orchestration.",
-        "Leveraged the Vercel SDK for frontend deployment, enabling seamless integration of serverless functions and performance monitoring in production."
+        "Architected a multi-phase, multi-LLM AI report generation pipeline built as durable Inngest functions with retries and concurrency control, replacing one-shot API calls with background jobs.",
+        "Owned a distributed worker microservice for AI workloads across multiple queue types, including an idempotent Excel/CSV ingestion pipeline with Gemini schema analysis and S3 I/O.",
+        "Built an AI-powered Survey Builder Agent with Zod schema validation against Gemini structured output for natural-language survey management.",
+        "Built REST APIs in Express.js with MongoDB and Redis; implemented JWT auth, RBAC, and Google OAuth2 for Google Sheets and Slack integrations.",
+        "Containerized production services with Docker, GitHub Actions CI/CD, and deployments on AWS ECS and Railway.",
       ],
     },
     {
       company: "HJ Animation Shop LTD",
-      position: "MERN Stack Developer",
+      position: "Full-Stack Developer",
       duration: "Jul 23 - Sep 24 | Remote | Loughton, United Kingdom",
       responsibilities: [
-        "Built and deployed full-stack features with TypeScript, React.js, Node.js, and MongoDB, focusing on UI components via Tailwind CSS and reusable modules.",
-        "Integrated third-party services (payment, auth, analytics) and designed secure RESTful APIs using JWT/OAuth2, improving platform security and extensibility.",
-        "Automated deployments, built reusable components, and implemented smart workflows, boosting development velocity and aligning with CI/CD practices."
-      ],
-    },
-    {
-      company: "Legal Fist",
-      position: "Full Stack Developer",
-      duration: "Jun 22 - Jun 23 | Remote | Dhaka, Bangladesh",
-      responsibilities: [
-        "Designed and deployed dynamic apps using Next.js, React, Tailwind CSS, and PostgreSQL via Prisma ORM, achieving clean and responsive UI.",
-        "Built and maintained backend features using Node.js, Express.js, and MongoDB, integrating with PostgreSQL via Prisma for optimal queries.",
-        "Contributed to cross-team code reviews, sprint planning, and deployment pipelines using Git and Linux servers on DigitalOcean."
+        "Built autonomous AI customer support platform (Aximus) with Vercel AI SDK — ToolLoopAgent, tool-calling, and keyword-scoring RAG engine with Meta webhook ingestion.",
+        "Architected multi-tenant SaaS platforms in Next.js and Drizzle ORM, including commission engines, AI portrait editing, exam grading, and a headless CMS with RSC and JSON-LD.",
+        "Integrated Better Auth with RBAC, OTP 2FA, and session revocation; wired payment flows and serverless PDF certificate generation.",
       ],
     },
   ];

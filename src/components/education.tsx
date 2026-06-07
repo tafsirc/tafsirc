@@ -16,9 +16,6 @@ export function Education() {
             2021 - 2024 | Completed
           </p>
           <p className="text-muted-foreground mt-2">Graduated with CGPA 3.67</p>
-          <p className="text-muted-foreground">
-            Enlisted for Dean&apos;s Award List
-          </p>
         </CardContent>
       </Card>
     </section>

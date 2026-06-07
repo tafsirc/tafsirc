@@ -7,12 +7,12 @@ export function Footer() {
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <p className="text-center text-sm leading-loose md:text-left">
             Built by{" "}
-            <span className="font-bold">Chowdhury Tafsir Ahmed Siddiki</span>.
+            <span className="font-bold">Tafsir Chowdhury</span>.
           </p>
         </div>
         <div className="flex items-center space-x-4">
           <a
-            href="https://github.com/ctafsiras"
+            href="https://github.com/tafsirc"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -20,7 +20,7 @@ export function Footer() {
             <span className="sr-only">GitHub</span>
           </a>
           <a
-            href="https://linkedin.com/in/ctafsiras"
+            href="https://linkedin.com/in/tafsirc"
             target="_blank"
             rel="noopener noreferrer"
           >

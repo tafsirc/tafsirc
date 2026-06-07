@@ -10,15 +10,15 @@ export function Hero() {
   return (
     <section className="py-24 px-6 text-center">
       <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl">
-        Chowdhury Tafsir Ahmed Siddiki
+        Tafsir Chowdhury
       </h1>
       <div className="mt-4 h-[40px] lg:h-[56px] text-xl md:text-4xl">
         <TypewriterEffect sentences={typedSentences} />
       </div>
       <p className="mx-auto mt-4 max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-        An IBM Certified Full Stack Developer, passionate about continuous
-        learning, exploring new technologies, and creating innovative solutions
-        to solve real-world problems.
+        Backend-first engineer with 3+ years shipping production web apps —
+        multi-LLM pipelines, distributed workers, and scalable APIs with
+        TypeScript, Node.js, Next.js, and AWS.
       </p>
       <div className="mt-8 flex justify-center gap-4">
         <Button asChild>

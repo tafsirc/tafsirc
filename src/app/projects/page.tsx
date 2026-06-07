@@ -13,9 +13,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "All Projects | Chowdhury Tafsir Ahmed Siddiki",
+  title: "All Projects | Tafsir Chowdhury",
   description:
-    "Browse all projects built by Chowdhury Tafsir Ahmed Siddiki - Full Stack Developer.",
+    "Browse projects by Tafsir Chowdhury — Full Stack AI Engineer. Production SaaS, AI platforms, and full-stack applications.",
 };
 
 export default function AllProjectsPage() {
@@ -31,8 +31,8 @@ export default function AllProjectsPage() {
       </div>
       <h1 className="text-4xl font-bold text-center mb-4">All Projects</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-        A collection of projects I have built, ranging from full-stack ecommerce
-        platforms to AI-powered applications and developer tools.
+        Production platforms and side projects — from AI-powered SaaS and
+        multi-tenant dashboards to ecommerce and developer tools.
       </p>
       <div className="grid gap-6 md:grid-cols-2">
         {projects.map((project) => (

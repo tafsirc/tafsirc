@@ -27,7 +27,7 @@ export function generateMetadata({
     return { title: "Project Not Found" };
   }
   return {
-    title: `${project.title} | Chowdhury Tafsir Ahmed Siddiki`,
+    title: `${project.title} | Tafsir Chowdhury`,
     description: project.overview,
   };
 }

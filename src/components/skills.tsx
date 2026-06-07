@@ -1,6 +1,5 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "./ui/card";
 import dynamic from "next/dynamic";
 const ClientReOrder = dynamic(() => import("./reorder"), { ssr: false });
@@ -14,10 +13,10 @@ export function Skills() {
         "TypeScript",
         "React",
         "Next.js",
+        "TanStack Query",
+        "Zustand",
         "Tailwind CSS",
         "ShadCN UI",
-        "Redux",
-        "Ant Design",
       ],
     },
     {
@@ -25,47 +24,40 @@ export function Skills() {
       skills: [
         "Node.js",
         "Express.js",
+        "Drizzle",
         "Prisma",
         "Mongoose",
-        "OpenAI",
-        "Gemini",
-        "Claude",
         "Redis",
-        "Firebase",
-        "NextAuth/Auth.js",
-        "Clerk",
         "BullMQ",
+        "Better Auth",
+        "Clerk",
+      ],
+    },
+    {
+      category: "AI",
+      skills: [
+        "RAG",
+        "AI Agents",
+        "Tool Calling",
+        "Vercel AI SDK",
+        "OpenAI API",
+        "Claude API",
+        "Gemini API",
       ],
     },
     {
       category: "Database",
-      skills: [
-        "PostgreSQL",
-        "MySQL",
-        "MongoDB",
-        "Supabase",
-        "Neon.tech",
-      ],
+      skills: ["PostgreSQL", "MongoDB", "MySQL"],
     },
     {
-      category: "DevOps & Tools",
+      category: "DevOps & Cloud",
       skills: [
-        "Git",
-        "GitHub",
-        "GitHub Actions",
         "Docker",
         "AWS (EC2, ECS)",
-        "DigitalOcean",
-      ],
-    },
-    {
-      category: "Interpersonal Skills",
-      skills: [
-        "Diligent",
-        "Problem Solver",
-        "Highly Accountable",
-        "Active Listener",
-        "Team Player",
+        "Vercel",
+        "Railway",
+        "GitHub Actions",
+        "CI/CD",
       ],
     },
   ];
