@@ -1,11 +1,10 @@
-\documentclass[letterpaper,15.5pt]{article}
+\documentclass[letterpaper,11pt]{article}
 
-\usepackage{latexsym}
+\usepackage{anyfontsize}
+\renewcommand{\normalsize}{\fontsize{11.5pt}{14pt}\selectfont}
+
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
@@ -15,13 +14,10 @@
     pdfkeywords={Full Stack AI Engineer, Software Developer}
 }
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{multicol}
-\input{glyphtounicode}
-
-\usepackage{helvet}
-\renewcommand{\familydefault}{\sfdefault}
+\usepackage{fontawesome5}
+\usepackage{charter}
+\usepackage[T1]{fontenc}
+\usepackage{xcolor}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -32,78 +28,78 @@
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.65in}
-\addtolength{\textheight}{1.3in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+\renewcommand{\baselinestretch}{1.15}
 
-\pdfgentounicode=1
+\titleformat{\section}{
+  \vspace{-6pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule\vspace{-3pt}]
 
 \newcommand{\resumeItem}[1]{
-  \item\normalsize{#1 \vspace{-2pt}}
+  \item\small{#1 \vspace{-1pt}}
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
+  \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\normalsize#3} & \textit{\normalsize #4} \\
-    \end{tabular*}\vspace{-7pt}
+      \textbf{#1} & \textit{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-6pt}
 }
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \normalsize#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
+      \small#1 & \textit{\small #2} \\
+    \end{tabular*}\vspace{-6pt}
 }
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=1pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 \begin{document}
 
-%----------HEADING----------
 \begin{center}
-    \textbf{\huge \scshape TAFSIR CHOWDHURY} \\ \vspace{4pt}
-    {\Large \textbf{Full Stack AI Engineer}} \\ \vspace{4pt}
-    \normalsize +8801983510532 $|$
-    \href{mailto:ctafsiras@gmail.com}{ctafsiras@gmail.com} $|$
-    \href{https://www.linkedin.com/in/tafsirc}{Linkedin} $|$
-    \href{https://github.com/tafsirc}{GitHub}
+    {\Huge \textbf{Tafsir Chowdhury}} \\
+    \vspace{5pt}
+    {\large \textit{Full Stack AI Engineer}}
+    \vspace{8pt}
+
+    \small
+    \faEnvelope\ \href{mailto:ctafsiras@gmail.com}{ctafsiras@gmail.com} \ $|$\
+    \faPhone\ +8801983510532 \ $|$\
+    \faLinkedin\ \href{https://www.linkedin.com/in/tafsirc}{tafsirc} \ $|$\
+    \faGithub\ \href{https://github.com/tafsirc}{tafsirc}
 \end{center}
-\vspace{-6pt}
 
 %-----------SUMMARY-----------
 \section{Summary}
-\normalsize{
-Backend-first Full Stack AI Engineer with system design depth, AI pipeline ownership, and DevOps working knowledge. 3+ years building production-grade web applications with TypeScript, Node.js, Next.js, and cloud infrastructure (AWS EC2/ECS, Railway). Proven track record architecting multi-LLM pipelines (OpenAI, Claude, Gemini), distributed worker systems, and scalable REST APIs for global clients. BSc in Computer Science with a 3.67 GPA and multiple IBM and Meta certifications.
-}
-\vspace{-4pt}
+\small{Backend-first Full Stack AI Engineer with system design depth, AI pipeline ownership, and DevOps working knowledge. 3+ years building production-grade web applications with TypeScript, Node.js, Next.js, and cloud infrastructure (AWS EC2/ECS, Railway). Proven track record architecting multi-LLM pipelines (OpenAI, Claude, Gemini), distributed worker systems, and scalable REST APIs for global clients. BSc in Computer Science with a 3.67 GPA and multiple IBM and Meta certifications.}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \normalsize{\item{
-     \textbf{Languages}{: JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL} \\
-     \textbf{Frontend}{: React.js, Next.js, Tanstack Query, Zustand, Redux, Tailwind CSS, ShadCN UI, Ant Design} \\
-     \textbf{Backend}{: Node.js, Express.js, Drizzle, Prisma ORM, Mongoose, Redis, BullMQ, Better Auth, Auth.js, Clerk} \\
-     \textbf{AI \& ML}{: LangChain, LangGraph, Vercel AI SDK, OpenAI API, Claude API, Gemini API, LangSmith} \\
-     \textbf{Databases}{: PostgreSQL, MongoDB, MySQL, Supabase, Neon.tech} \\
-     \textbf{DevOps \& Cloud}{: AWS (EC2, ECS), Docker, GitHub Actions, DigitalOcean, Vercel, CI/CD Pipelines} \\
-     \textbf{Tools}{: Git, GitHub, Postman, Linux}
+  \resumeSubHeadingListStart
+    \small{\item{
+     \textbf{Languages:}{ JavaScript (ES6+), TypeScript, HTML5, CSS3, SQL} \\[2pt]
+     \textbf{Frontend:}{ React.js, Next.js, Tanstack Query, Zustand, Redux, Tailwind CSS, ShadCN UI, Ant Design} \\[2pt]
+     \textbf{Backend:}{ Node.js, Express.js, Drizzle, Prisma ORM, Mongoose, Redis, BullMQ, Better Auth, Auth.js, Clerk} \\[2pt]
+     \textbf{AI \& ML:}{ LangChain, LangGraph, Vercel AI SDK, OpenAI API, Claude API, Gemini API, LangSmith} \\[2pt]
+     \textbf{Databases:}{ PostgreSQL, MongoDB, MySQL, Supabase, Neon.tech} \\[2pt]
+     \textbf{DevOps \& Cloud:}{ AWS (EC2, ECS), Docker, GitHub Actions, DigitalOcean, Vercel, CI/CD Pipelines} \\[2pt]
+     \textbf{Tools:}{ Git, GitHub, Postman, Linux}
     }}
- \end{itemize}
-\vspace{-8pt}
+  \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
@@ -133,7 +129,6 @@ Backend-first Full Stack AI Engineer with system design depth, AI pipeline owner
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
-\vspace{-8pt}
 
 %-----------PROJECTS-----------
 \section{Projects}
@@ -169,7 +164,6 @@ Backend-first Full Stack AI Engineer with system design depth, AI pipeline owner
             \resumeItem{Deployed the distributed architecture to Vercel and cloud servers with a fully automated CI/CD pipeline, ensuring zero-downtime releases and instant preview deployments.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
-\vspace{-8pt}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -182,28 +176,26 @@ Backend-first Full Stack AI Engineer with system design depth, AI pipeline owner
         \resumeItem{Enlisted for Dean's Award List}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
-\vspace{-8pt}
 
 %-----------CERTIFICATIONS-----------
 \section{Certifications}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \normalsize{\item{
-      \textbf{IBM}{: \href{https://www.coursera.org/account/accomplishments/specialization/5SFM8DFYF42P}{Full Stack Software Developer Specialization}} \\
-      \textbf{Meta}{: \href{https://www.coursera.org/account/accomplishments/specialization/WV4TQ6TLE7Y6}{Front-End Developer Specialization} $|$ \href{https://www.coursera.org/account/accomplishments/specialization/NN9JFTR8M3D8}{Back-End Developer Specialization}} \\
-      \textbf{Google}{: \href{https://www.coursera.org/account/accomplishments/specialization/XAVRVE794RRZ}{IT Support Specialization}} \\
-      \textbf{Amazon Web Services}{: \href{https://www.coursera.org/account/accomplishments/specialization/790A6Q46ZUY6}{AWS Fundamentals Specialization}}
+  \resumeSubHeadingListStart
+    \small{\item{
+      \textbf{IBM:}{ \href{https://www.coursera.org/account/accomplishments/specialization/5SFM8DFYF42P}{Full Stack Software Developer Specialization}} \\[2pt]
+      \textbf{Meta:}{ \href{https://www.coursera.org/account/accomplishments/specialization/WV4TQ6TLE7Y6}{Front-End Developer Specialization} $|$ \href{https://www.coursera.org/account/accomplishments/specialization/NN9JFTR8M3D8}{Back-End Developer Specialization}} \\[2pt]
+      \textbf{Google:}{ \href{https://www.coursera.org/account/accomplishments/specialization/XAVRVE794RRZ}{IT Support Specialization}} \\[2pt]
+      \textbf{Amazon Web Services:}{ \href{https://www.coursera.org/account/accomplishments/specialization/790A6Q46ZUY6}{AWS Fundamentals Specialization}}
     }}
- \end{itemize}
+  \resumeSubHeadingListEnd
 
 %-----------LANGUAGES-----------
 \section{Languages}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \normalsize{\item{
-     \textbf{English}{: (Comfortable - professional and technical communication)} \\
-     \textbf{Bengali}{: (Native)} \\
-     \textbf{Hindi}{: (Communicative)}
+  \resumeSubHeadingListStart
+    \small{\item{
+     \textbf{English:}{ (Comfortable - professional and technical communication)} \\[2pt]
+     \textbf{Bengali:}{ (Native)} \\[2pt]
+     \textbf{Hindi:}{ (Communicative)}
     }}
- \end{itemize}
+  \resumeSubHeadingListEnd
 
-%-------------------------------------------
 \end{document}
