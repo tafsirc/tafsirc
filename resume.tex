@@ -109,12 +109,11 @@
       {Standard Insights}{Oct '24 -- Present}
       {Full Stack AI Engineer}{Remote $|$ New York, USA}
       \resumeItemListStart
-        \resumeItem{Architected and shipped a multi-phase, multi-LLM AI report generation pipeline powering market trend analysis, consumer persona synthesis, and strategic insights -- built as 32 durable Inngest functions with automatic retries, concurrency control, and failure callbacks, replacing a brittle single-request model and eliminating job loss on server restarts.}
+        \resumeItem{Architected and shipped a multi-phase, multi-LLM AI report generation pipeline powering market trend analysis, consumer persona synthesis, and strategic insights. Built as 32 durable Inngest functions with automatic retries, concurrency control, and failure callbacks, replacing one-shot API calls with durable background jobs.}
         \resumeItem{Designed and owned a distributed background worker microservice processing AI workloads across 10+ concurrent queue types (quantitative data analysis, interview translation, persona generation, B2B scraping, Google Sheets sync), including a 6-step idempotent Excel/CSV ingestion pipeline with Gemini schema analysis and S3 I/O; implemented batching and per-survey concurrency locks to prevent race conditions at scale.}
-        \resumeItem{Built an AI-powered Survey Builder Engine with 7-intent discriminated-union Zod schema validation against Gemini structured output, enabling natural-language survey authoring and real-time LLM-to-state mutation with zero schema-drift between the API and database layer.}
-        \resumeItem{Built and optimized RESTful APIs across 50+ Express modules using MongoDB (50+ Mongoose models) and Redis caching, improving session state management and data-layer response consistency; implemented JWT-based auth, role-based access control, and Google OAuth2 token refresh lifecycle for third-party integrations (Google Sheets, Slack).}
-        \resumeItem{Containerized 3 production services (client, server, admin) with Docker and managed deployments on AWS ECS, Railway, integrating CI/CD pipelines via GitHub Actions; deployed the worker service as an AWS Lambda function for cost-optimized serverless execution at scale.}
-        \resumeItem{Delivered consumer intelligence dashboards and survey creation UIs using Next.js 15 App Router, TypeScript, TanStack Query, Zustand, and ShadCN/Radix UI, contributing to a Turborepo monorepo spanning 4 apps and 19 shared packages.}
+        \resumeItem{Built an AI-powered Survey Builder Agent with multiple tools and 7-intent discriminated-union Zod schema validation against Gemini structured output, enabling natural-language survey management and real-time LLM-to-state mutation with zero schema-drift between the API and database layer.}
+        \resumeItem{Built and optimized REST APIs in Express.js with MongoDB and Redis caching; implemented JWT auth, role-based access control, and Google OAuth2 token refresh for Google Sheets and Slack integrations.}
+        \resumeItem{Containerized 3 production services (client, server, admin) with Docker, integrated CI/CD pipelines via GitHub Actions and deployed on AWS ECS, Railway for cost-optimized serverless execution at scale.}
       \resumeItemListEnd
 
     \resumeSubheading
