@@ -1,6 +1,7 @@
 import { About } from "@/components/about";
 import { Blog } from "@/components/blog";
 import { Contact } from "@/components/contact";
+import { fetchMediumArticles } from "@/lib/medium";
 import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
@@ -119,10 +120,14 @@ function logFetchFailure(source: string, error: unknown) {
 export default async function Home() {
   const updatedStats = { ...fallbackStats };
 
-  const [leetcodeResult, codeforceResult] = await Promise.allSettled([
-    fetchLeetCodeStats(),
-    fetchCodeforceStats(),
-  ]);
+  const [leetcodeResult, codeforceResult, articles] = await Promise.all([
+    Promise.allSettled([fetchLeetCodeStats(), fetchCodeforceStats()]),
+    fetchMediumArticles(),
+  ]).then(([stats, mediumArticles]) => [
+    stats[0],
+    stats[1],
+    mediumArticles,
+  ] as const);
 
   if (leetcodeResult.status === "fulfilled") {
     Object.assign(updatedStats, leetcodeResult.value);
@@ -145,7 +150,7 @@ export default async function Home() {
       <Projects />
       <LeetCode updatedStats={updatedStats} />
       <Skills />
-      <Blog />
+      <Blog articles={articles} />
       <Education />
       <Contact />
     </div>

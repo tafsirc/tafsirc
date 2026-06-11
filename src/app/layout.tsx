@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import ScrollTracker from "@/components/scroll-tracker";
 import { Analytics } from "@vercel/analytics/next";
+import { fetchMediumArticles } from "@/lib/medium";
 
 const font = Font({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -18,18 +19,20 @@ export const metadata: Metadata = {
     "Portfolio of Tafsir Chowdhury — Full Stack AI Engineer building multi-LLM pipelines, distributed systems, and production web apps with TypeScript, Node.js, Next.js, and AWS.",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const articles = await fetchMediumArticles();
+
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={font.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <ScrollTracker />
           <div className="flex flex-col min-h-screen">
-            <Navbar />
+            <Navbar showBlog={articles.length > 0} />
             <main className="flex-grow">{children}</main>
             <Footer />
           </div>

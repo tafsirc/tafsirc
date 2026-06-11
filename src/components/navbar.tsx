@@ -12,18 +12,30 @@ import {
   SheetClose,
 } from "@/components/ui/sheet";
 
-const navLinks = [
+const baseNavLinks = [
   { href: "/#about", label: "About" },
   { href: "/#experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
   { href: "/#leetCode", label: "LeetCode" },
   { href: "/#skills", label: "Skills" },
-  { href: "/blog", label: "Blog" },
   { href: "/#education", label: "Education" },
   { href: "/#contact", label: "Contact" },
 ];
 
-export function Navbar() {
+const blogNavLink = { href: "/blog", label: "Articles" };
+
+interface NavbarProps {
+  showBlog?: boolean;
+}
+
+export function Navbar({ showBlog = false }: NavbarProps) {
+  const navLinks = showBlog
+    ? [
+        ...baseNavLinks.slice(0, 5),
+        blogNavLink,
+        ...baseNavLinks.slice(5),
+      ]
+    : baseNavLinks;
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center px-4 mx-auto">

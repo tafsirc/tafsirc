@@ -6,18 +6,26 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { blogPosts } from "@/data/blogs";
+import { fetchMediumArticles } from "@/lib/medium";
 import Link from "next/link";
 import Image from "next/image";
+import { notFound } from "next/navigation";
+import { ExternalLink } from "lucide-react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Chowdhury Tafsir Ahmed Siddiki",
+  title: "Articles | Chowdhury Tafsir Ahmed Siddiki",
   description:
     "Technical articles and insights by Chowdhury Tafsir Ahmed Siddiki on full stack development, AI integration, and modern web technologies.",
 };
 
-export default function BlogPage() {
+export default async function BlogPage() {
+  const articles = await fetchMediumArticles();
+
+  if (articles.length === 0) {
+    notFound();
+  }
+
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mb-8">
@@ -28,22 +36,35 @@ export default function BlogPage() {
           &larr; Back to Home
         </Link>
       </div>
-      <h1 className="text-4xl font-bold text-center mb-4">Blog</h1>
+      <h1 className="text-4xl font-bold text-center mb-4">Articles</h1>
       <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
         Sharing my knowledge and experiences in full stack development, backend
-        architecture, and AI integration.
+        architecture, and AI integration on{" "}
+        <a
+          href="https://medium.com/@tafsirc"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-primary hover:underline"
+        >
+          Medium
+        </a>
+        .
       </p>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {blogPosts.map((post) => (
-          <Card key={post.slug} className="flex flex-col overflow-hidden">
-            <div className="relative h-48 w-full">
-              <Image
-                src={post.coverImage}
-                alt={post.title}
-                fill
-                className="object-cover"
-              />
-            </div>
+        {articles.map((post) => (
+          <Card key={post.id} className="flex flex-col overflow-hidden">
+            {post.coverImage ? (
+              <div className="relative h-48 w-full">
+                <Image
+                  src={post.coverImage}
+                  alt={post.title}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+            ) : (
+              <div className="h-48 w-full bg-muted" />
+            )}
             <CardHeader>
               <div className="text-sm text-muted-foreground mb-2">
                 {new Date(post.date).toLocaleDateString("en-US", {
@@ -61,7 +82,14 @@ export default function BlogPage() {
             </CardHeader>
             <CardContent className="mt-auto">
               <Button asChild variant="outline" className="w-full">
-                <Link href={`/blog/${post.slug}`}>Read More</Link>
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Read on Medium
+                  <ExternalLink className="ml-2 h-4 w-4" />
+                </a>
               </Button>
             </CardContent>
           </Card>
