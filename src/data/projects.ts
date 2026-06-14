@@ -44,9 +44,10 @@ export const projects: Project[] = [
     title: "Everything Green",
     description: "Digital sustainability and SEO platform.",
     overview:
-      "Everything Green helps businesses measure digital sustainability and improve SEO performance. Features a RAG chatbot, AI-driven SEO recommendations, subscription billing, and interactive data visualizations.",
+      "Everything Green helps businesses measure digital sustainability and improve SEO performance. Built on NestJS and Next.js, with a RAG chatbot, AI-driven SEO recommendations, subscription billing, and interactive data visualizations.",
     technologies: [
       "Next.js",
+      "NestJS",
       "MongoDB",
       "OpenAI",
       "RAG",
