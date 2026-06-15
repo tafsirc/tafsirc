@@ -10,17 +10,44 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/data/projects";
 import Link from "next/link";
-import type { Metadata } from "next";
+import { createMetadata, absoluteUrl } from "@/lib/seo";
+import { JsonLd } from "@/components/json-ld";
+import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "All Projects | Tafsir Chowdhury",
+export const metadata = createMetadata({
+  title: "All Projects",
   description:
     "Browse projects by Tafsir Chowdhury — Full Stack AI Engineer. Production SaaS, AI platforms, and full-stack applications.",
-};
+  path: "/projects",
+  keywords: ["projects", "portfolio", "SaaS", "AI platforms"],
+});
 
 export default function AllProjectsPage() {
+  const projectsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Projects by Tafsir Chowdhury",
+    description:
+      "Production SaaS, AI platforms, and full-stack applications built by Tafsir Chowdhury.",
+    url: absoluteUrl("/projects"),
+    numberOfItems: projects.length,
+    itemListElement: projects.map((project, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: project.title,
+      url: absoluteUrl(`/projects/${project.slug}`),
+      description: project.description,
+    })),
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+  };
+
   return (
     <div className="container mx-auto px-4 py-16">
+      <JsonLd data={projectsJsonLd} />
       <div className="mb-8">
         <Link
           href="/"

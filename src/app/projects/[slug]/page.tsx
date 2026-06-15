@@ -10,6 +10,13 @@ import {
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl, createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
 
 export function generateStaticParams() {
   return projects.map((project) => ({
@@ -17,34 +24,61 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({
+export async function generateMetadata({
   params,
-}: {
-  params: { slug: string };
-}): Metadata {
-  const project = projects.find((p) => p.slug === params.slug);
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
+
   if (!project) {
-    return { title: "Project Not Found" };
+    return createMetadata({
+      title: "Project Not Found",
+      description: "The requested project could not be found.",
+      path: `/projects/${slug}`,
+      noIndex: true,
+    });
   }
-  return {
-    title: `${project.title} | Tafsir Chowdhury`,
+
+  return createMetadata({
+    title: project.title,
     description: project.overview,
-  };
+    path: `/projects/${project.slug}`,
+    keywords: [...project.technologies, "software project", "case study"],
+  });
 }
 
-export default function ProjectDetailsPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const project = projects.find((p) => p.slug === params.slug);
+export default async function ProjectDetailsPage({ params }: PageProps) {
+  const { slug } = await params;
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) {
     notFound();
   }
 
+  const projectJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: project.title,
+    description: project.overview,
+    url: project.live || absoluteUrl(`/projects/${project.slug}`),
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+    keywords: project.technologies.join(", "),
+    ...(project.github
+      ? {
+          codeRepository: project.github,
+        }
+      : {}),
+  };
+
   return (
     <div className="container mx-auto px-4 py-16 max-w-4xl">
+      <JsonLd data={projectJsonLd} />
       <div className="mb-8 flex gap-4">
         <Link
           href="/projects"

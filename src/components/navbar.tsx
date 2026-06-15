@@ -40,7 +40,12 @@ export function Navbar({ showBlog = false }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center px-4 mx-auto">
         <Link href="/" className="mr-6 flex items-center space-x-2">
-          <Image src="/logo.png" alt="logo" width={32} height={32} />
+          <Image
+            src="/logo.png"
+            alt="Tafsir Chowdhury portfolio logo"
+            width={32}
+            height={32}
+          />
           <span className="font-bold text-xl">Tafsir&apos;s Portfolio</span>
         </Link>
 
@@ -71,7 +76,12 @@ export function Navbar({ showBlog = false }: NavbarProps) {
             <SheetContent side="right" className="w-[280px]">
               <div className="flex flex-col gap-4 mt-8">
                 <div className="flex items-center gap-2 mb-4">
-                  <Image src="/logo.png" alt="logo" width={28} height={28} />
+                  <Image
+                    src="/logo.png"
+                    alt="Tafsir Chowdhury portfolio logo"
+                    width={28}
+                    height={28}
+                  />
                   <span className="font-bold text-lg">Tafsir&apos;s Portfolio</span>
                 </div>
                 <nav className="flex flex-col gap-3">

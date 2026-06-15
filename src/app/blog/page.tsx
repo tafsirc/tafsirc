@@ -11,13 +11,17 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ExternalLink } from "lucide-react";
-import type { Metadata } from "next";
+import { JsonLd } from "@/components/json-ld";
+import { absoluteUrl, createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Articles | Chowdhury Tafsir Ahmed Siddiki",
+export const metadata = createMetadata({
+  title: "Articles",
   description:
-    "Technical articles and insights by Chowdhury Tafsir Ahmed Siddiki on full stack development, AI integration, and modern web technologies.",
-};
+    "Technical articles and insights by Tafsir Chowdhury on full stack development, AI integration, and modern web technologies.",
+  path: "/blog",
+  keywords: ["blog", "articles", "technical writing", "Medium"],
+});
 
 export default async function BlogPage() {
   const articles = await fetchMediumArticles();
@@ -26,8 +30,37 @@ export default async function BlogPage() {
     notFound();
   }
 
+  const blogDescription =
+    "Technical articles and insights by Tafsir Chowdhury on full stack development, AI integration, and modern web technologies.";
+
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Articles by Tafsir Chowdhury",
+    description: blogDescription,
+    url: absoluteUrl("/blog"),
+    author: {
+      "@type": "Person",
+      name: siteConfig.author.name,
+      url: siteConfig.url,
+    },
+    blogPost: articles.map((post) => ({
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.date,
+      url: post.link,
+      author: {
+        "@type": "Person",
+        name: siteConfig.author.name,
+      },
+      ...(post.coverImage ? { image: post.coverImage } : {}),
+    })),
+  };
+
   return (
     <div className="container mx-auto px-4 py-16">
+      <JsonLd data={blogJsonLd} />
       <div className="mb-8">
         <Link
           href="/"

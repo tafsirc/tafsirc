@@ -8,6 +8,14 @@ import { Hero } from "@/components/hero";
 import LeetCode from "@/components/leetCode";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
+import { createMetadata } from "@/lib/seo";
+import { siteConfig } from "@/lib/site";
+
+export const metadata = createMetadata({
+  title: siteConfig.title,
+  description: siteConfig.description,
+  path: "/",
+});
 
 type SubmissionStats = {
   difficulty: string;
