@@ -39,6 +39,20 @@ const socials = [
       "bg-sky-500/10 text-sky-600 hover:bg-sky-600 hover:text-white active:bg-sky-600 active:text-white border-sky-500/20",
   },
   {
+    name: "WhatsApp",
+    url: "https://wa.me/+8801983510532",
+    icon: MessageCircle,
+    color:
+      "bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white active:bg-green-500 active:text-white border-green-500/20",
+  },
+  {
+    name: "Facebook",
+    url: "https://facebook.com/tafsirc",
+    icon: Facebook,
+    color:
+      "bg-blue-600/10 text-blue-600 hover:bg-blue-600 hover:text-white active:bg-blue-600 active:text-white border-blue-600/20",
+  },
+  {
     name: "X (Twitter)",
     url: "https://x.com/tafsirch",
     icon: Twitter,
@@ -52,26 +66,12 @@ const socials = [
     color:
       "bg-pink-500/10 text-pink-600 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 active:bg-gradient-to-tr active:from-yellow-400 active:via-pink-500 active:to-purple-500 hover:text-white active:text-white border-pink-500/20 hover:border-transparent active:border-transparent",
   },
-  {
-    name: "Facebook",
-    url: "https://facebook.com/tafsirc",
-    icon: Facebook,
-    color:
-      "bg-blue-600/10 text-blue-600 hover:bg-blue-600 hover:text-white active:bg-blue-600 active:text-white border-blue-600/20",
-  },
-  {
-    name: "WhatsApp",
-    url: "https://wa.me/+8801983510532",
-    icon: MessageCircle,
-    color:
-      "bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white active:bg-green-500 active:text-white border-green-500/20",
-  },
 ];
 
 export default function SocialsPage() {
   return (
-    <div className="min-h-[100dvh] bg-background flex flex-col items-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="w-full max-w-md space-y-8 mt-12">
+    <div className="min-h-[100dvh] bg-background flex flex-col items-center py-6 px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-md space-y-8 mt-4">
         <div className="flex flex-col items-center text-center">
           <div className="relative w-28 h-28 mb-4 rounded-full overflow-hidden border-4 border-primary/10 shadow-lg">
             <Image
