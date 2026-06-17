@@ -1,6 +1,12 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import { Linkedin, Github, Code } from "lucide-react";
 
 export function Footer() {
+  const pathname = usePathname();
+  if (pathname === "/socials") return null;
+
   return (
     <footer className="border-t">
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0 px-4 mx-auto">

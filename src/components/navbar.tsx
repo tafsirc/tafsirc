@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ModeToggle } from "@/components/mode-toggle";
 import Image from "next/image";
 import { Menu } from "lucide-react";
@@ -36,6 +37,10 @@ export function Navbar({ showBlog = false }: NavbarProps) {
         ...baseNavLinks.slice(5),
       ]
     : baseNavLinks;
+    
+  const pathname = usePathname();
+  if (pathname === "/socials") return null;
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 items-center px-4 mx-auto">
