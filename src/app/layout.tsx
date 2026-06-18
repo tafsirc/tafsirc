@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Poppins as Font } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/footer";
@@ -97,6 +98,19 @@ export default async function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-83RJXW471B"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-83RJXW471B');
+          `}
+        </Script>
       </body>
     </html>
   );
