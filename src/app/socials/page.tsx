@@ -61,7 +61,7 @@ const socials = [
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/tafsirc",
+    url: "https://instagram.com/tafsircy",
     icon: Instagram,
     color:
       "bg-pink-500/10 text-pink-600 hover:bg-gradient-to-tr hover:from-yellow-400 hover:via-pink-500 hover:to-purple-500 active:bg-gradient-to-tr active:from-yellow-400 active:via-pink-500 active:to-purple-500 hover:text-white active:text-white border-pink-500/20 hover:border-transparent active:border-transparent",
