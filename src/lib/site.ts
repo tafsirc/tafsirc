@@ -22,7 +22,7 @@ export const siteConfig = {
   ],
   author: {
     name: "Tafsir Chowdhury",
-    email: "ctafsiras@gmail.com",
+    email: "tafsircy@gmail.com",
     url: "https://tafsir.qom.bd",
   },
   social: {

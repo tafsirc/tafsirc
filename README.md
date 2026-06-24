@@ -20,7 +20,7 @@ I ship production-grade full stack applications — from AI-powered SaaS and con
 
 <div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tafsirc) [![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/tafsirc) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:ctafsiras@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/tafsirc) [![GitHub](https://img.shields.io/badge/GitHub-%23181717.svg?logo=github&logoColor=white)](https://github.com/tafsirc) [![Email](https://img.shields.io/badge/Email-D14836?logo=gmail&logoColor=white)](mailto:tafsircy@gmail.com)
 
 </div>
 

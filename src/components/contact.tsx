@@ -28,10 +28,10 @@ export function Contact() {
                 Email
               </p>
               <a
-                href="mailto:ctafsiras@gmail.com"
+                href="mailto:tafsircy@gmail.com"
                 className="text-primary hover:underline"
               >
-                ctafsiras@gmail.com
+                tafsircy@gmail.com
               </a>
             </div>
             <div>
@@ -65,7 +65,7 @@ export function Contact() {
           <CardContent>
             <form
               className="space-y-4"
-              action="mailto:ctafsiras@gmail.com"
+              action="mailto:tafsircy@gmail.com"
               method="GET"
             >
               <div>
