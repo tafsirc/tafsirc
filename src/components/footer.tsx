@@ -37,7 +37,7 @@ export function Footer() {
             {[
               { href: "https://github.com/tafsirc", icon: Github, label: "GitHub" },
               { href: "https://linkedin.com/in/tafsirc", icon: Linkedin, label: "LinkedIn" },
-              { href: "https://leetcode.com/u/ctafsiras", icon: Code, label: "LeetCode" },
+              { href: "https://leetcode.com/u/tafsirc", icon: Code, label: "LeetCode" },
             ].map(({ href, icon: Icon, label }) => (
               <a
                 key={label}

@@ -12,7 +12,7 @@ export function Contact() {
   const socials = [
     { label: "GitHub", href: "https://github.com/tafsirc" },
     { label: "LinkedIn", href: "https://linkedin.com/in/tafsirc" },
-    { label: "LeetCode", href: "https://leetcode.com/u/ctafsiras" },
+    { label: "LeetCode", href: "https://leetcode.com/u/tafsirc" },
     { label: "Medium", href: "https://medium.com/@tafsirc" },
   ];
 

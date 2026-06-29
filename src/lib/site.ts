@@ -28,7 +28,7 @@ export const siteConfig = {
   social: {
     github: "https://github.com/tafsirc",
     linkedin: "https://linkedin.com/in/tafsirc",
-    leetcode: "https://leetcode.com/u/ctafsiras",
+    leetcode: "https://leetcode.com/u/tafsirc",
     medium: "https://medium.com/@tafsirc",
   },
 } as const;
