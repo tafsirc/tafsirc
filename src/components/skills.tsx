@@ -33,7 +33,7 @@ export function Skills() {
       ],
     },
     {
-      category: "AI / ML",
+      category: "Applied AI",
       skills: [
         "RAG",
         "AI Agents",
