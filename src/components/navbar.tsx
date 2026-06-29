@@ -17,7 +17,7 @@ const baseNavLinks = [
   { href: "/#about", label: "About" },
   { href: "/#experience", label: "Experience" },
   { href: "/projects", label: "Projects" },
-  { href: "/#leetCode", label: "LeetCode" },
+  { href: "/#problem-solving", label: "Problem Solving" },
   { href: "/#skills", label: "Skills" },
   { href: "/#education", label: "Education" },
   { href: "/#contact", label: "Contact" },

@@ -3,41 +3,21 @@ import { motion, useInView } from "framer-motion";
 import { Card, CardContent } from "./ui/card";
 import { useRef } from "react";
 
-interface LeetCodeStats {
-  totalSolved: number;
-  totalQuestions: number;
-  easySolved: number;
-  totalEasy: number;
-  mediumSolved: number;
-  totalMedium: number;
-  hardSolved: number;
-  totalHard: number;
-  acceptanceRate: number;
-  contributionPoint: number;
-  reputation: number;
-  ranking: number;
-  codeforceProblem: number;
-}
-
 const difficultyColors: Record<string, string> = {
-  All: "bg-blue-500",
-  Easy: "bg-green-500",
-  Medium: "bg-yellow-500",
-  Hard: "bg-red-500",
+  All: "bg-gradient-to-br from-blue-500 to-indigo-600",
+  Easy: "bg-gradient-to-br from-emerald-500 to-teal-600",
+  Medium: "bg-gradient-to-br from-orange-500 to-rose-600",
+  Hard: "bg-gradient-to-br from-violet-500 to-purple-600",
 };
 
-const borderColors: Record<string, string> = {
-  All: "border-blue-500",
-  Easy: "border-green-500",
-  Medium: "border-yellow-500",
-  Hard: "border-red-500",
+
+const STATIC_STATS = {
+  easySolved: 70,
+  mediumSolved: 22,
+  codeforceProblem: 146,
 };
 
-export default function LeetCode({
-  updatedStats,
-}: {
-  updatedStats: LeetCodeStats;
-}) {
+export default function LeetCode() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
@@ -45,31 +25,31 @@ export default function LeetCode({
     {
       difficulty: "All",
       title: "Total Solved",
-      count: updatedStats.totalSolved,
-      total: updatedStats.totalQuestions + "+",
+      count: STATIC_STATS.easySolved + STATIC_STATS.mediumSolved + STATIC_STATS.codeforceProblem,
+      total: "800+",
     },
     {
       difficulty: "Easy",
       title: "LeetCode (Easy)",
-      count: updatedStats.easySolved,
-      total: updatedStats.totalEasy,
+      count: STATIC_STATS.easySolved,
+      total: 850,
     },
     {
       difficulty: "Medium",
       title: "LeetCode (Medium)",
-      count: updatedStats.mediumSolved,
-      total: updatedStats.totalMedium,
+      count: STATIC_STATS.mediumSolved,
+      total: 1790,
     },
     {
       difficulty: "Hard",
       title: "Codeforce Problems",
-      count: updatedStats.codeforceProblem,
+      count: STATIC_STATS.codeforceProblem,
       total: "N/A",
     },
   ];
 
   return (
-    <section id="leetCode" className="py-16 max-w-3xl mx-auto" ref={sectionRef}>
+    <section id="problem-solving" className="py-16 max-w-3xl mx-auto" ref={sectionRef}>
       <h2 className="text-3xl font-bold text-center mb-8">Problem Solving Stats</h2>
       <Card>
         <CardContent>
@@ -99,43 +79,7 @@ export default function LeetCode({
                 >
                   {stat.count}
                 </motion.div>
-                <p className="text-sm text-white mt-2">out of {stat.total}</p>
-              </motion.div>
-            ))}
-          </div>
 
-          <div className="mt-8 grid grid-cols-2 sm:grid-cols-4 gap-4">
-            {[
-              {
-                title: "Acceptance Rate",
-                value: `${updatedStats.acceptanceRate}%`,
-                color: borderColors.All,
-              },
-              {
-                title: "Contribution Points",
-                value: updatedStats.contributionPoint,
-                color: borderColors.Easy,
-              },
-              {
-                title: "Reputation",
-                value: updatedStats.reputation,
-                color: borderColors.Medium,
-              },
-              {
-                title: "Ranking",
-                value: updatedStats.ranking.toLocaleString(),
-                color: borderColors.Hard,
-              },
-            ].map((item, index) => (
-              <motion.div
-                key={item.title}
-                className={`p-4 rounded-lg shadow-md text-center border-2 ${item.color} flex flex-col justify-center h-24`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-              >
-                <h4 className="text-sm font-semibold mb-1">{item.title}</h4>
-                <p className="text-lg font-bold">{item.value}</p>
               </motion.div>
             ))}
           </div>
