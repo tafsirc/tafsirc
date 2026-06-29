@@ -1,93 +1,104 @@
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import { featuredProjects } from "@/data/projects";
-
-const gradients = [
-  "from-blue-500 to-indigo-600",
-  "from-emerald-500 to-teal-600",
-  "from-orange-500 to-rose-600",
-  "from-violet-500 to-purple-600",
-  "from-cyan-500 to-sky-600",
-];
+import { ExternalLink, Github, ArrowRight } from "lucide-react";
 
 export function Projects() {
   return (
-    <section id="projects" className="py-16">
-      <h2 className="text-3xl font-bold text-center mb-8">Projects</h2>
-      <div className="grid gap-6 md:grid-cols-2">
+    <section id="projects" className="py-16 max-w-5xl mx-auto px-4">
+      <div className="section-rule">
+        <span className="section-tag shrink-0">Featured Work</span>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-px bg-border">
         {featuredProjects.map((project, i) => (
-          <Card key={project.slug} className="flex flex-col">
-            <CardHeader>
-              <div
-                className={`mb-4 h-48 rounded-lg bg-gradient-to-br ${gradients[i % gradients.length]} flex items-center justify-center`}
-              >
-                <span className="text-white text-2xl font-bold tracking-wide opacity-90 text-center px-4">
+          <div key={project.slug} className="bg-background p-8 border-b border-border">
+            {/* Project Header */}
+            <div className="mb-4">
+              <h3 className="font-serif text-2xl font-bold text-foreground leading-tight mb-2 hover:text-emerald-400 transition-colors">
+                <Link href={`/projects/${project.slug}`}>
                   {project.title}
+                </Link>
+              </h3>
+              <p className="font-serif text-lg italic text-muted-foreground leading-relaxed">
+                {project.description}
+              </p>
+            </div>
+
+            <div className="h-px bg-border mb-5" />
+
+            {/* Tech Stack Tags */}
+            <div className="flex flex-wrap gap-2 mb-6">
+              {project.technologies.slice(0, 5).map((tech, idx) => (
+                <span
+                  key={idx}
+                  className="text-[0.65rem] tracking-widest uppercase border border-border px-2 py-0.5 text-foreground font-sans"
+                >
+                  {tech}
                 </span>
-              </div>
-              <CardTitle>{project.title}</CardTitle>
-              <CardDescription>{project.description}</CardDescription>
-            </CardHeader>
-            <CardContent className="flex-grow">
-              <div className="mb-4 flex flex-wrap gap-2">
-                {project.technologies.map((tech, idx) => (
-                  <Badge key={idx} variant="secondary">
-                    {tech}
-                  </Badge>
-                ))}
-              </div>
-              <ul className="list-disc pl-5 space-y-2">
-                {project.features.map((feature, idx) => (
-                  <li key={idx} className="text-justify">
-                    {feature}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-            <CardFooter className="flex justify-between gap-2">
-              {project.github ? (
-                <Button asChild variant="outline" size="sm">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer">
-                    GitHub
-                  </a>
-                </Button>
-              ) : (
-                <Button disabled variant="outline" size="sm">
-                  GitHub
-                </Button>
+              ))}
+              {project.technologies.length > 5 && (
+                <span className="text-[0.65rem] tracking-widest uppercase text-muted-foreground font-sans self-center">
+                  +{project.technologies.length - 5} more
+                </span>
               )}
-              <Button asChild variant="outline" size="sm">
-                <Link href={`/projects/${project.slug}`}>Project Details</Link>
-              </Button>
-              {project.live ? (
-                <Button asChild size="sm">
-                  <a href={project.live} target="_blank" rel="noopener noreferrer">
-                    Live Demo
-                  </a>
-                </Button>
-              ) : (
-                <Button disabled size="sm">
-                  Live Demo
-                </Button>
+            </div>
+
+            {/* Key Features */}
+            <ul className="space-y-2.5 mb-8">
+              {project.features.slice(0, 3).map((feature, idx) => (
+                <li key={idx} className="flex gap-2.5 text-[0.85rem] text-muted-foreground leading-relaxed font-sans">
+                  <span className="font-serif font-bold mt-0.5 shrink-0" style={{ color: "#34d399" }}>
+                    &mdash;
+                  </span>
+                  {feature}
+                </li>
+              ))}
+            </ul>
+
+            {/* Links */}
+            <div className="flex flex-wrap gap-4 mt-auto pt-4 border-t border-border/50">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs tracking-widest uppercase font-sans font-semibold text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  <Github className="w-3.5 h-3.5" /> Source
+                </a>
               )}
-            </CardFooter>
-          </Card>
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 text-xs tracking-widest uppercase font-sans font-semibold transition-colors"
+                  style={{ color: "#34d399" }}
+                >
+                  <ExternalLink className="w-3 h-3" /> Live Demo
+                </a>
+              )}
+              <Link
+                href={`/projects/${project.slug}`}
+                className="flex items-center gap-1.5 text-xs tracking-widest uppercase font-sans font-semibold text-foreground hover:opacity-70 transition-opacity ml-auto"
+              >
+                Case Study <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
-      <div className="text-center mt-8">
-        <Button asChild variant="outline" size="lg">
-          <Link href="/projects">View All Projects</Link>
-        </Button>
+
+      <div className="text-center mt-12 bg-background">
+        <Link
+          href="/projects"
+          className="inline-block border border-foreground/30 hover:border-foreground/60 px-8 py-3 text-xs tracking-widest uppercase font-sans font-semibold transition-colors"
+        >
+          View Portfolio Archive
+        </Link>
       </div>
+
+      <div className="border-t border-foreground/10 mt-8" />
     </section>
   );
 }
