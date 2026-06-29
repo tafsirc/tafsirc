@@ -47,7 +47,7 @@ export function Navbar({ showBlog = false }: NavbarProps) {
         <Link href="/" className="mr-6 flex items-center group">
           <span className="font-serif text-lg font-bold tracking-tight text-foreground group-hover:text-emerald-400 transition-colors"
             style={{ "--tw-text-opacity": 1 } as React.CSSProperties}>
-            T.Chowdhury
+            Tafsir C.
           </span>
         </Link>
 
@@ -76,7 +76,7 @@ export function Navbar({ showBlog = false }: NavbarProps) {
             <SheetContent side="right" className="w-[280px] border-border bg-background rounded-none">
               <div className="flex flex-col gap-4 mt-8">
                 <div className="mb-4">
-                  <p className="font-serif text-xl font-bold text-foreground">T.Chowdhury</p>
+                  <p className="font-serif text-xl font-bold text-foreground">Tafsir C.</p>
                   <div className="h-px bg-border mt-2" />
                 </div>
                 <nav className="flex flex-col">
