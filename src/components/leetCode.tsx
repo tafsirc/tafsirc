@@ -1,90 +1,88 @@
 "use client";
 import { motion, useInView } from "framer-motion";
-import { Card, CardContent } from "./ui/card";
 import { useRef } from "react";
 
-const difficultyColors: Record<string, string> = {
-  All: "bg-gradient-to-br from-blue-500 to-indigo-600",
-  Easy: "bg-gradient-to-br from-emerald-500 to-teal-600",
-  Medium: "bg-gradient-to-br from-orange-500 to-rose-600",
-  Hard: "bg-gradient-to-br from-violet-500 to-purple-600",
-};
-
-
-const STATIC_STATS = {
-  easySolved: 70,
-  mediumSolved: 22,
-  codeforceProblem: 146,
-};
+const stats = [
+  {
+    title: "Total Solved",
+    count: 238,
+    total: "800+",
+    note: "Across all platforms",
+  },
+  {
+    title: "LeetCode Easy",
+    count: 70,
+    total: "of 850",
+    note: "Accuracy-focused",
+  },
+  {
+    title: "LeetCode Medium",
+    count: 22,
+    total: "of 1790",
+    note: "Consistency building",
+  },
+  {
+    title: "Codeforces",
+    count: 146,
+    total: "problems",
+    note: "Competitive practice",
+  },
+];
 
 export default function LeetCode() {
   const sectionRef = useRef(null);
   const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
 
-  const stats = [
-    {
-      difficulty: "All",
-      title: "Total Solved",
-      count: STATIC_STATS.easySolved + STATIC_STATS.mediumSolved + STATIC_STATS.codeforceProblem,
-      total: "800+",
-    },
-    {
-      difficulty: "Easy",
-      title: "LeetCode (Easy)",
-      count: STATIC_STATS.easySolved,
-      total: 850,
-    },
-    {
-      difficulty: "Medium",
-      title: "LeetCode (Medium)",
-      count: STATIC_STATS.mediumSolved,
-      total: 1790,
-    },
-    {
-      difficulty: "Hard",
-      title: "Codeforce Problems",
-      count: STATIC_STATS.codeforceProblem,
-      total: "N/A",
-    },
-  ];
-
   return (
-    <section id="problem-solving" className="py-16 max-w-3xl mx-auto" ref={sectionRef}>
-      <h2 className="text-3xl font-bold text-center mb-8">Problem Solving Stats</h2>
-      <Card>
-        <CardContent>
-          <div className="pt-6 grid grid-cols-2 gap-6">
-            {stats.map((stat, index) => (
-              <motion.div
-                key={stat.difficulty}
-                className={`${
-                  difficultyColors[stat.difficulty]
-                } p-6 rounded-lg shadow-md text-center`}
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-              >
-                <h3 className="text-xl font-semibold text-white mb-2">
-                  {stat.title}
-                </h3>
-                <motion.div
-                  className="text-4xl font-bold text-white"
-                  initial={{ scale: 0 }}
-                  animate={isInView ? { scale: 1 } : {}}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    delay: 0.2 + index * 0.1,
-                  }}
-                >
-                  {stat.count}
-                </motion.div>
+    <section id="problem-solving" className="py-16 max-w-5xl mx-auto px-4" ref={sectionRef}>
+      <div className="section-rule">
+        <span className="section-tag shrink-0">Problem Solving</span>
+      </div>
 
-              </motion.div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
+      {/* Infographic header */}
+      <div className="mb-8">
+        <p className="font-serif text-2xl font-bold text-foreground mb-1">
+          By the Numbers
+        </p>
+        <p className="text-muted-foreground text-sm font-sans italic">
+          Competitive programming statistics — LeetCode & Codeforces.
+        </p>
+      </div>
+
+      {/* Stats grid — newspaper data box style */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-border">
+        {stats.map((stat, index) => (
+          <motion.div
+            key={stat.title}
+            className="bg-background p-6"
+            initial={{ opacity: 0, y: 16 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+          >
+            {/* Emerald accent top rule */}
+            <div className="h-[3px] w-8 mb-4" style={{ backgroundColor: "#34d399" }} />
+
+            <motion.p
+              className="font-serif text-5xl font-black text-foreground leading-none mb-2"
+              initial={{ opacity: 0 }}
+              animate={isInView ? { opacity: 1 } : {}}
+              transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
+            >
+              {stat.count}
+            </motion.p>
+
+            <p className="text-foreground text-sm font-semibold font-sans mb-1">
+              {stat.title}
+            </p>
+            <p className="dateline">{stat.total}</p>
+            <p className="text-muted-foreground text-xs font-sans italic mt-1">
+              {stat.note}
+            </p>
+          </motion.div>
+        ))}
+      </div>
+
+      <div className="border-t border-foreground/10 mt-8" />
     </section>
   );
 }

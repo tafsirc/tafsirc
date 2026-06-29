@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Poppins as Font } from "next/font/google";
+import { Inter } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
@@ -12,10 +13,18 @@ import { JsonLd } from "@/components/json-ld";
 import { absoluteUrl, createMetadata } from "@/lib/seo";
 import { siteConfig } from "@/lib/site";
 
-const font = Font({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+const inter = Inter({
+  weight: ["300", "400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-inter",
+});
+
+const playfair = Playfair_Display({
+  weight: ["400", "500", "600", "700", "800", "900"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-playfair",
 });
 
 export const metadata: Metadata = {
@@ -87,9 +96,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={font.className}>
+      <body className={`${inter.variable} ${playfair.variable} ${inter.className}`}>
         <JsonLd data={[personJsonLd, websiteJsonLd]} />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <ScrollTracker />
           <div className="flex flex-col min-h-screen">
             <Navbar showBlog={articles.length > 0} />

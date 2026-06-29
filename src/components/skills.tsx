@@ -1,6 +1,5 @@
 "use client";
 
-import { Card, CardContent } from "./ui/card";
 import dynamic from "next/dynamic";
 const ClientReOrder = dynamic(() => import("./reorder"), { ssr: false });
 
@@ -34,7 +33,7 @@ export function Skills() {
       ],
     },
     {
-      category: "AI",
+      category: "AI / ML",
       skills: [
         "RAG",
         "AI Agents",
@@ -63,28 +62,43 @@ export function Skills() {
   ];
 
   return (
-    <section id="skills" className="py-16 max-w-3xl mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-8">Skills</h2>
-      <Card>
-        <CardContent>
-          <div className="space-y-6 pt-6">
-            {skillCategories.map((category, index) => (
-              <div key={index}>
-                <h3 className="text-xl font-semibold mb-2">
-                  {category.category}
-                </h3>
-                <div>
-                  <ClientReOrder
-                    className="cursor-grab h-8"
-                    parentClassName="flex flex-wrap gap-2"
-                    initialItems={category.skills}
-                  />
-                </div>
-              </div>
-            ))}
+    <section id="skills" className="py-16 max-w-5xl mx-auto px-4">
+      <div className="section-rule">
+        <span className="section-tag shrink-0">Skills & Technologies</span>
+      </div>
+
+      <div className="grid md:grid-cols-3 gap-px bg-border">
+        {/* Index column header */}
+        <div className="md:col-span-3 bg-background pb-4">
+          <p className="font-serif text-2xl font-bold text-foreground mb-1">
+            Technical Index
+          </p>
+          <p className="text-muted-foreground text-sm font-sans italic">
+            Drag to reorder within categories.
+          </p>
+        </div>
+
+        {skillCategories.map((cat, i) => (
+          <div
+            key={i}
+            className="bg-background pt-5 pb-6 pr-6"
+            style={{ borderTop: "1px solid hsl(var(--border))" }}
+          >
+            {/* Category header — serif italic label */}
+            <p className="font-serif text-base font-bold italic text-foreground mb-1 leading-tight">
+              {cat.category}
+            </p>
+            <div className="h-px mb-4" style={{ backgroundColor: "#34d399", opacity: 0.5 }} />
+            <ClientReOrder
+              className="cursor-grab active:cursor-grabbing h-7"
+              parentClassName="flex flex-wrap gap-2"
+              initialItems={cat.skills}
+            />
           </div>
-        </CardContent>
-      </Card>
+        ))}
+      </div>
+
+      <div className="border-t border-foreground/10 mt-8" />
     </section>
   );
 }
