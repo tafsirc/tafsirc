@@ -81,7 +81,7 @@ export function Skills() {
         {skillCategories.map((cat, i) => (
           <div
             key={i}
-            className="bg-background pt-5 pb-6 pr-6"
+            className="bg-background pt-5 pb-6 px-6"
             style={{ borderTop: "1px solid hsl(var(--border))" }}
           >
             {/* Category header — serif italic label */}
