@@ -37,12 +37,20 @@ export function Education() {
           <div className="space-y-5">
             {[
               {
-                name: "IBM Full Stack Development",
+                name: "Full Stack Software Developer",
                 issuer: "IBM / Coursera",
               },
               {
-                name: "Meta Front-End Developer",
+                name: "Back-End Developer",
                 issuer: "Meta / Coursera",
+              },
+              {
+                name: "Front-End Developer",
+                issuer: "Meta / Coursera",
+              },
+              {
+                name: "AWS Fundamentals",
+                issuer: "AWS / Coursera",
               },
             ].map((cert) => (
               <div key={cert.name} className="border-b border-border pb-4 last:border-0 last:pb-0">

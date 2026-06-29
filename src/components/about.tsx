@@ -29,8 +29,8 @@ export function About() {
           </p>
           <p className="text-muted-foreground leading-relaxed text-[0.95rem]">
             I hold a Bachelor of Science in Computer Science from the University
-            of the People (CGPA 3.67), and carry full-stack certifications from
-            IBM and Meta.
+            of the People (CGPA 3.67), and carry software engineering
+            certifications from IBM, Meta, and AWS.
           </p>
 
           {/* Pull quote */}
@@ -65,7 +65,7 @@ export function About() {
             <div className="border-t border-border pt-4">
               <p className="dateline mb-1">Certifications</p>
               <p className="text-foreground text-sm font-sans leading-snug">
-                IBM Full Stack · Meta Front-End Developer
+                IBM Full Stack · Meta Back-End & Front-End · AWS Fundamentals
               </p>
             </div>
             <div className="border-t border-border pt-4">
