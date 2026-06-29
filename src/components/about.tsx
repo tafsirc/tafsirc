@@ -15,7 +15,7 @@ export function About() {
           <p className="dateline mb-6">By Tafsir Chowdhury &mdash; Dhaka, Bangladesh</p>
 
           <p className="drop-cap text-muted-foreground leading-relaxed text-[0.95rem] mb-4">
-            ackend-first by philosophy, full-stack by necessity. I have spent the
+            Backend-first by philosophy, full-stack by necessity. I have spent the
             last three years writing the code that most users never see — the
             worker queues, the retry logic, the LLM orchestration layers — the
             infrastructure that makes products feel effortless.

@@ -44,7 +44,7 @@ export function Hero() {
             Backend-First Engineer Architects AI Systems for Global Product Teams
           </h2>
           <p className="drop-cap text-muted-foreground leading-relaxed text-[0.95rem]">
-            ith over three years of production experience, Tafsir Chowdhury
+            With over three years of production experience, Tafsir Chowdhury
             builds the infrastructure that makes modern AI applications possible —
             multi-LLM pipelines, distributed worker systems, and scalable REST APIs
             trusted by teams across New York and beyond.
