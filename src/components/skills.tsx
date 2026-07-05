@@ -10,6 +10,7 @@ export function Skills() {
       skills: [
         "JavaScript",
         "TypeScript",
+        "SQL",
         "React",
         "Next.js",
         "TanStack Query",

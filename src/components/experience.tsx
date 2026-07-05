@@ -24,9 +24,9 @@ export function Experience() {
       current: false,
       lede: "Built an autonomous AI customer support platform and a suite of multi-tenant SaaS products for a UK-based creative agency.",
       responsibilities: [
-        "Built autonomous AI customer support platform (Aximus) with Vercel AI SDK — ToolLoopAgent, tool-calling, and keyword-scoring RAG engine with Meta webhook ingestion.",
-        "Architected multi-tenant SaaS platforms in Next.js and Drizzle ORM, including commission engines, AI portrait editing, exam grading, and a headless CMS with RSC and JSON-LD.",
-        "Integrated Better Auth with RBAC, OTP 2FA, and session revocation; wired payment flows and serverless PDF certificate generation.",
+        "Built autonomous AI customer support platform (Aximus) using Vercel AI SDK — engineered a ToolLoopAgent with dynamic tool-calling and a keyword-scoring RAG engine (no embedding API; 98% accuracy), with HMAC-SHA256 Meta webhook ingestion and atomic DB idempotency locks.",
+        "Architected multi-tenant SaaS platforms in Next.js and Drizzle ORM, including a floating-point-free commission math engine, custom binary JPEG/PNG metadata parser for AI portrait editing, randomized exam engine with practical video submission grading, and a headless CMS (Parocia) with RSC, dynamic sitemap/JSON-LD, and UUID-hashed file storage.",
+        "Integrated Better Auth with RBAC, 6-digit OTP 2FA, and session revocation; wired SumUp and UddoktaPay v2 payment flows, and serverless jsPDF routes with font-scaling for dynamic certificate generation.",
       ],
       tags: ["Next.js", "Vercel AI SDK", "RAG", "Drizzle ORM", "Better Auth"],
     },
