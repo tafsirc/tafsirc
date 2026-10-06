@@ -8,10 +8,10 @@
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \hypersetup{
-    pdftitle={Tafsir Chowdhury - Full Stack AI Engineer},
+    pdftitle={Tafsir Chowdhury - Full Stack Engineer},
     pdfauthor={Tafsir Chowdhury},
     pdfsubject={Resume},
-    pdfkeywords={Full Stack AI Engineer, Software Developer}
+    pdfkeywords={Full Stack Engineer, TypeScript, Node.js, Next.js, AI Integration}
 }
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
@@ -73,89 +73,90 @@
 \begin{center}
     {\Huge \textbf{Tafsir Chowdhury}} \\
     \vspace{5pt}
-    {\large \textit{Full Stack AI Engineer}}
+    {\large \textit{Full Stack Engineer $|$ TypeScript, Node.js \& Applied AI}}
     \vspace{8pt}
 
     \small
     \faEnvelope\ \href{mailto:tafsircy@gmail.com}{tafsircy@gmail.com} \ $|$\
     \faPhone\ +8801983510532 \ $|$\
     \faLinkedin\ \href{https://www.linkedin.com/in/tafsirc}{tafsirc} \ $|$\
-    \faGithub\ \href{https://github.com/tafsirc}{tafsirc}
+    \faGithub\ \href{https://github.com/tafsirc}{tafsirc} \ $|$\
+    \href{https://www.upwork.com/freelancers/~01a150d13d45613490}{Upwork}
 \end{center}
 
 %-----------SUMMARY-----------
 \section{Summary}
-\small{Backend-first Full Stack AI Engineer with system design depth, AI pipeline ownership, and DevOps working knowledge. 3+ years building production-grade web applications with TypeScript, Node.js, Next.js, and cloud infrastructure (AWS EC2/ECS, Railway). Proven track record architecting multi-LLM pipelines (OpenAI, Claude, Gemini), distributed worker systems, and scalable REST APIs for global clients.}
+\small{Full-stack engineer building web applications since 2022 with TypeScript, React, Next.js, and Node.js. Owns work across frontend interfaces, backend APIs, databases, integrations, and deployment. Experience includes AI-assisted research tools, durable background processing, sports media automation, business operations platforms, and examination systems.}
 
 %-----------TECHNICAL SKILLS-----------
 \section{Technical Skills}
   \resumeSubHeadingListStart
     \small{\item{
-     \textbf{Languages:}{ JavaScript (ES6+), TypeScript, SQL} \\[2pt]
-     \textbf{Frontend:}{ React.js, Next.js, Tanstack Query, Zustand, Tailwind CSS, ShadCN UI} \\[2pt]
-     \textbf{Backend:}{ Node.js, Express.js, Drizzle, Prisma ORM, Mongoose, Redis, BullMQ, Better Auth, Clerk} \\[2pt]
-     \textbf{AI:}{ Retrieval-Augmented Generation, AI Agents, Tool Calling, Vercel AI SDK, OpenAI API, Claude API, Gemini API} \\[2pt]
-     \textbf{Databases:}{ PostgreSQL, MongoDB, MySQL} \\[2pt]
-     \textbf{DevOps \& Cloud:}{ Docker, AWS (EC2, ECS), Vercel, Railway, GitHub Actions, CI/CD Pipelines}
+     \textbf{Languages:}{ TypeScript, JavaScript, SQL, HTML, CSS} \\[2pt]
+     \textbf{Frontend:}{ React, Next.js, TanStack Query, Zustand, Tailwind CSS, ShadCN UI} \\[2pt]
+     \textbf{Backend \& Data:}{ Node.js, Express, Hono, PostgreSQL, MongoDB, SQLite, Drizzle, Prisma, Redis, BullMQ, Inngest} \\[2pt]
+     \textbf{AI \& Integrations:}{ OpenAI, Claude, Gemini, Vercel AI SDK, RAG, Tool Calling, Stripe, OAuth2, Better Auth} \\[2pt]
+     \textbf{Delivery:}{ Docker, AWS EC2/ECS, Railway, Vercel, GitHub Actions, Git, Jest, React Testing Library}
     }}
   \resumeSubHeadingListEnd
 
 %-----------EXPERIENCE-----------
 \section{Professional Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Standard Insights}{Oct '24 -- Present}
+      {Standard Insights}{Oct 2024 -- Present}
       {Full Stack AI Engineer}{Remote $|$ New York, USA}
       \resumeItemListStart
-        \resumeItem{Architected and shipped a multi-phase, multi-LLM AI report generation pipeline powering market trend analysis, consumer persona synthesis, and strategic insights. Built as 32 durable Inngest functions with automatic retries, concurrency control, and failure callbacks, replacing one-shot API calls with durable background jobs.}
-        \resumeItem{Designed and owned a distributed background worker microservice processing AI workloads across 10+ concurrent queue types (quantitative data analysis, interview translation, persona generation, B2B scraping, Google Sheets sync), including a 6-step idempotent Excel/CSV ingestion pipeline with Gemini schema analysis and S3 I/O; implemented batching and per-survey concurrency locks to prevent race conditions at scale.}
-        \resumeItem{Built an AI-powered Survey Builder Agent with multiple tools and 7-intent discriminated-union Zod schema validation against Gemini structured output, enabling natural-language survey management and real-time LLM-to-state mutation with zero schema-drift between the API and database layer.}
-        \resumeItem{Built and optimized REST APIs in Express.js with MongoDB and Redis caching; implemented JWT auth, role-based access control, and Google OAuth2 token refresh for Google Sheets and Slack integrations.}
-        \resumeItem{Containerized 3 production services (client, server, admin) with Docker, integrated CI/CD pipelines via GitHub Actions and deployed on AWS ECS, Railway for cost-optimized serverless execution at scale.}
+        \resumeItem{Built survey and report interfaces in Next.js/React, Node.js APIs, and database workflows for a consumer research platform; owned features through deployment.}
+        \resumeItem{Replaced one-shot AI report requests with 32 durable Inngest functions, adding retries, concurrency controls, and failure handling. Built a structured-output Survey Builder Agent with Gemini and Zod.}
+        \resumeItem{Developed distributed workers across 10+ BullMQ/Redis queue types, including idempotent Excel/CSV ingestion with S3; integrated JWT/RBAC and Google OAuth2 for Sheets/Slack.}
+        \resumeItem{Containerized three services with Docker and GitHub Actions CI/CD; deployed on AWS ECS and Railway and supported production troubleshooting.}
       \resumeItemListEnd
 
     \resumeSubheading
-      {HJ Animation Shop LTD}{Jul '23 -- Sep '24}
-      {Full-Stack Developer}{Remote $|$ Loughton, United Kingdom}
+      {HJ Animation Shop LTD}{Jul 2023 -- Sep 2024}
+      {Full-Stack Developer}{Remote $|$ Loughton, UK}
       \resumeItemListStart
-        \resumeItem{Built autonomous AI customer support platform (Aximus) using Next.js and Vercel AI SDK. Engineered a ToolLoopAgent with dynamic tool-calling and a keyword-scoring RAG engine (no embedding API; 98\% accuracy), with HMAC-SHA256 Meta webhook ingestion and atomic DB idempotency locks.}
-        \resumeItem{Architected multi-tenant SaaS platforms in Next.js 16 and Drizzle ORM, including a floating-point-free commission math engine, custom binary JPEG/PNG metadata parser for AI portrait editing, randomized exam engine with practical video submission grading, and a headless CMS (Parocia) with RSC, dynamic sitemap/JSON-LD, and UUID-hashed file storage.}
-        \resumeItem{Integrated Better Auth with RBAC, 6-digit OTP 2FA, and session revocation across products; wired SumUp and UddoktaPay v2 payment flows, and serverless jsPDF routes with font-scaling for dynamic certificate generation.}
+        \resumeItem{Built Aximus, an AI customer support platform with Next.js, TypeScript, Vercel AI SDK, tool calling, and keyword-based retrieval; implemented Meta webhook validation and idempotent processing.}
+        \resumeItem{Developed multi-tenant SaaS applications with Next.js and Drizzle, including commission calculations, examination/video-grading workflows, and the Parocia headless CMS.}
+        \resumeItem{Implemented authentication, RBAC, OTP 2FA, payment integrations, and PDF certificates, with responsive interfaces and reusable components.}
       \resumeItemListEnd
 
+    \resumeSubheading
+      {Legal Fist}{Jun 2022 -- Jun 2023}
+      {Full Stack Developer}{Remote}
+      \resumeItemListStart
+        \resumeItem{Built an online examination application with timed exams, automatic scoring, question management, exam-history reports, and student/admin dashboards using Next.js, React, and Tailwind CSS.}
+        \resumeItem{Deployed the application on DigitalOcean and resolved issues across the frontend, backend, and server.}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
-\section{Projects}
-    \resumeSubHeadingListStart
-      \resumeProjectHeading
-          {\textbf{Visual Source} $|$ \emph{Real-time soccer match operations and social graphic automation}}{\href{https://my.visualsource.nl/}{Live} $|$ 2026}
-          \resumeItemListStart
-            \resumeItem{Architected a multi-tenant soccer club dashboard using Next.js 16, Turborepo, and Better-Auth, securing isolated workspaces for multiple sports organizations.}
-            \resumeItem{Engineered a headless canvas rendering pipeline with Fabric.js, node-canvas, and Sharp to compile dynamic matchday graphics stored in Cloudflare R2.}
-            \resumeItem{Integrated Facebook, Instagram, and Twitter Graph APIs, executing a polling and media chunking pipeline for real-time automated matchday posting.}
-            \resumeItem{Designed a resilient Sportmonks API data synchronizer using PostgreSQL advisory locks to prevent database write collisions during concurrent syncing.}
-            \resumeItem{Developed a live event logging UI with game-state tracking, automatic score override mechanisms, and a cron-scheduled graphic publishing queue.}
-            \resumeItem{Deployed a containerized production stack using Docker Compose, orchestrating PostgreSQL, Next.js, and Caddy to automate SSL/HTTPS certificates and reverse proxying.}
-          \resumeItemListEnd
+\section{Selected Projects}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{Visual Source} $|$ \emph{Soccer operations \& media automation}}{\href{https://my.visualsource.nl/}{Live}}
+      \resumeItemListStart
+        \resumeItem{Built a multi-tenant club dashboard for live event tracking, branded match graphics, and scheduled social publishing. Implemented Fabric.js/node-canvas/Sharp rendering, Cloudflare R2 storage, and Sportmonks synchronization with PostgreSQL advisory locks.}
+        \resumeItem{Integrated social publishing workflows and deployed Next.js, PostgreSQL, and Caddy through Docker Compose.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{KDF Corporation ERP} $|$ \emph{Operations \& accounting}}{\href{https://kdfcorporation.qom.bd/}{Live}}
+      \resumeItemListStart
+        \resumeItem{Developed React interfaces, Hono/TypeScript APIs, and a Turso/SQLite database connecting projects, procurement, expenses, staff advances, and payroll with double-entry accounting.}
+        \resumeItem{Implemented approvals, audit trails, tender securities, performance guarantees, private documents, and Excel/printable reports.}
+      \resumeItemListEnd
+    \resumeProjectHeading
+      {\textbf{DeLegends Barbershop} $|$ \emph{Booking \& staff operations}}{\href{https://app.delegendsbarbershop.lt/}{Live}}
+      \resumeItemListStart
+        \resumeItem{Built a Next.js customer website, React admin dashboard, and TypeScript/PostgreSQL backend for appointment booking, multi-location calendars, availability, and receptionist workflows.}
+        \resumeItem{Added role-based access, client history, appointment checkout, payroll reports, gift cards, and loyalty rewards.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-      \resumeProjectHeading
-          {\textbf{Everything Green} $|$ \emph{Digital Sustainability \& SEO Platform}}{\href{https://www.everythinggreen.org/}{Live} $|$ 2025}
-          \resumeItemListStart
-            \resumeItem{Designed a Retrieval-Augmented Generation (RAG) chatbot on NestJS using MongoDB and OpenAI embeddings, featuring dynamic HTML scraping, semantic chunking, and context-aware query optimization to deliver digital sustainability advice.}
-            \resumeItem{Developed an AI SEO recommendation engine that matches Google Ads suggestions to scraped website pages via cosine similarity, classifying conversion performance using a custom-trained CatBoost model.}
-            \resumeItem{Implemented a secure subscription billing system using the Factory Pattern to integrate Stripe and PayPal, supporting customer portals, dynamic coupons, and webhook validation.}
-            \resumeItem{Built a responsive Next.js 15 dashboard with interactive D3/Sankey data visualizations for sustainability metrics.}
-          \resumeItemListEnd
-
-      \resumeProjectHeading
-          {\textbf{Career Dock} $|$ \emph{A Modern Job tracking application}}{\href{https://careerdock.app}{Live} $|$ 2024}
-          \resumeItemListStart
-            \resumeItem{Built an end-to-end Next.js and Express.js application with Clerk authentication, Lemon Squeezy subscription billing, and automated CI/CD deployments to Vercel.}
-            \resumeItem{Integrated the Gemini API to construct prompt-chaining workflows that generate tailored resumes, LinkedIn profiles, and cover letters based on target job descriptions.}
-          \resumeItemListEnd
-    \resumeSubHeadingListEnd
+%-----------OPEN SOURCE-----------
+\section{Open-Source Contributions}
+\small{\textbf{Formbricks:} Four merged pull requests for crash prevention, browser compatibility, language names, and documentation (\href{https://github.com/formbricks/formbricks/pull/7268}{\#7268}, \href{https://github.com/formbricks/formbricks/pull/7325}{\#7325}, \href{https://github.com/formbricks/formbricks/pull/7349}{\#7349}, \href{https://github.com/formbricks/formbricks/pull/7254}{\#7254}). \textbf{Submitted:} \href{https://github.com/dubinc/dub/pull/3501}{Dub mobile layout fix} and \href{https://github.com/AmanVarshney01/create-better-t-stack/pull/1264}{Better T Stack Convex/Better Auth configuration fix}.}
 
 %-----------EDUCATION-----------
 \section{Education}

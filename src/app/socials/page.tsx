@@ -39,6 +39,12 @@ const socials = [
       "bg-sky-500/10 text-sky-600 hover:bg-sky-600 hover:text-white active:bg-sky-600 active:text-white border-sky-500/20",
   },
   {
+    name: "Upwork",
+    url: siteConfig.social.upwork,
+    icon: Globe,
+    color: "bg-green-500/10 text-green-600 hover:bg-green-500 hover:text-white border-green-500/20",
+  },
+  {
     name: "WhatsApp",
     url: "https://wa.me/+8801983510532",
     icon: MessageCircle,

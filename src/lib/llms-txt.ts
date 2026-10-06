@@ -16,6 +16,7 @@ export async function generateLlmsTxt(): Promise<string> {
     `- Email: ${siteConfig.author.email}`,
     `- GitHub: ${siteConfig.social.github}`,
     `- LinkedIn: ${siteConfig.social.linkedin}`,
+    `- Upwork: ${siteConfig.social.upwork}`,
     `- LeetCode: ${siteConfig.social.leetcode}`,
     `- Medium: ${siteConfig.social.medium}`,
     "",

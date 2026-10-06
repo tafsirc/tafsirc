@@ -6,6 +6,7 @@ import { Education } from "@/components/education";
 import { Experience } from "@/components/experience";
 import { Hero } from "@/components/hero";
 import LeetCode from "@/components/leetCode";
+import { ProfessionalProof } from "@/components/professional-proof";
 import { Projects } from "@/components/projects";
 import { Skills } from "@/components/skills";
 import { createMetadata } from "@/lib/seo";
@@ -26,6 +27,7 @@ export default async function Home() {
       <About />
       <Experience />
       <Projects />
+      <ProfessionalProof />
       <LeetCode />
       <Skills />
       <Blog articles={articles} />

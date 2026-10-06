@@ -41,13 +41,13 @@ export function Hero() {
         <div className="md:col-span-2 bg-background p-6 pr-8">
           <p className="section-tag mb-3">Lead Story</p>
           <h2 className="font-serif text-2xl font-bold leading-snug text-foreground mb-4">
-            Backend-First Engineer Architects AI Systems for Global Product Teams
+            Full-Stack Engineer Builds Web Products from Idea to Deployment
           </h2>
           <p className="drop-cap text-muted-foreground leading-relaxed text-[0.95rem]">
-            With over three years of production experience, Tafsir Chowdhury
-            builds the infrastructure that makes modern AI applications possible —
-            multi-LLM pipelines, distributed worker systems, and scalable REST APIs
-            trusted by teams across New York and beyond.
+            Building web applications since 2022, Tafsir Chowdhury works across
+            frontend interfaces, backend APIs, databases, and deployment. His work
+            spans AI research tools, sports platforms, staffing, e-commerce, and
+            business operations software.
           </p>
           <p className="text-muted-foreground leading-relaxed text-[0.95rem] mt-3">
             Currently serving as Full Stack AI Engineer at{" "}
@@ -83,7 +83,7 @@ export function Hero() {
             {[
               { label: "Current Role", value: "Full Stack AI Engineer" },
               { label: "Employer", value: "Standard Insights, NY" },
-              { label: "Experience", value: "3+ Years" },
+              { label: "Experience", value: "Since 2022" },
               { label: "Degree", value: "B.Sc Computer Science" },
               { label: "GPA", value: "3.67 / 4.0" },
               { label: "Location", value: "Dhaka, Bangladesh" },

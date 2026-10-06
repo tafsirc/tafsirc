@@ -24,11 +24,25 @@ export function Experience() {
       current: false,
       lede: "Built an autonomous AI customer support platform and a suite of multi-tenant SaaS products for a UK-based creative agency.",
       responsibilities: [
-        "Built autonomous AI customer support platform (Aximus) using Vercel AI SDK — engineered a ToolLoopAgent with dynamic tool-calling and a keyword-scoring RAG engine (no embedding API; 98% accuracy), with HMAC-SHA256 Meta webhook ingestion and atomic DB idempotency locks.",
+        "Built autonomous AI customer support platform (Aximus) using Vercel AI SDK — engineered an agent with dynamic tool calling and a keyword-scoring RAG engine without an embedding API, with HMAC-SHA256 Meta webhook ingestion and atomic DB idempotency locks.",
         "Architected multi-tenant SaaS platforms in Next.js and Drizzle ORM, including a floating-point-free commission math engine, custom binary JPEG/PNG metadata parser for AI portrait editing, randomized exam engine with practical video submission grading, and a headless CMS (Parocia) with RSC, dynamic sitemap/JSON-LD, and UUID-hashed file storage.",
         "Integrated Better Auth with RBAC, 6-digit OTP 2FA, and session revocation; wired SumUp and UddoktaPay v2 payment flows, and serverless jsPDF routes with font-scaling for dynamic certificate generation.",
       ],
       tags: ["Next.js", "Vercel AI SDK", "RAG", "Drizzle ORM", "Better Auth"],
+    },
+    {
+      company: "Legal Fist",
+      position: "Full Stack Developer",
+      duration: "Jun 2022 — Jun 2023",
+      location: "Remote",
+      current: false,
+      lede: "Built and deployed an online examination platform for law students, covering the frontend, backend, and server deployment.",
+      responsibilities: [
+        "Developed timed exams, automatic scoring, question management, and exam-history reports.",
+        "Built responsive student and admin dashboards using Next.js, React, and Tailwind CSS.",
+        "Deployed the application on DigitalOcean and resolved issues across the application and server.",
+      ],
+      tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "DigitalOcean"],
     },
   ];
 

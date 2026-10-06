@@ -8,11 +8,177 @@ export interface Project {
   github: string;
   live: string;
   featured?: boolean;
+  problem?: string;
+  contribution?: string;
+  outcome?: string;
 }
 
 export const projects: Project[] = [
   {
+    "slug": "standard-insights",
+    "title": "Standard Insights",
+    "description": "AI-assisted survey creation, research reports, and contextual chatbots.",
+    "overview": "A consumer research and survey platform bringing survey management, AI-assisted reports, and contextual chatbots into a single research workflow.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Redis",
+      "BullMQ",
+      "Inngest",
+      "OpenAI",
+      "Claude",
+      "Gemini",
+      "AWS",
+      "Railway"
+    ],
+    "features": [
+      "Developed survey creation and management interfaces, backend APIs, and database workflows.",
+      "Built AI report generation and a natural-language Survey Builder Agent with structured output validation.",
+      "Implemented durable background jobs, retries, concurrency controls, and idempotent data ingestion.",
+      "Managed containerized deployments across AWS and Railway."
+    ],
+    "github": "",
+    "live": "https://app.standard-insights.com/",
+    "featured": true,
+    "problem": "Support survey research and AI analysis without tying long-running processing to a single web request.",
+    "contribution": "Full Stack AI Engineer: frontend, backend APIs, AI workflows, background processing, and deployment.",
+    "outcome": "Survey creation, report generation, and contextual research assistance share a workflow backed by durable processing."
+  },
+  {
+    "slug": "kdf-corporation",
+    "title": "KDF Corporation ERP",
+    "description": "Custom operations, accounting, and project management software.",
+    "overview": "A custom ERP connecting project operations with finance: procurement, vendors, staff advances, expenses, payroll, and management reporting.",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Hono",
+      "Turso",
+      "SQLite"
+    ],
+    "features": [
+      "Built the React frontend, TypeScript/Hono APIs, and Turso/SQLite database.",
+      "Implemented double-entry accounting, approvals, and audit trails.",
+      "Added tender securities, performance guarantees, and private document storage.",
+      "Delivered Excel exports and printable reports for operational and financial review."
+    ],
+    "github": "",
+    "live": "https://kdfcorporation.qom.bd/",
+    "featured": true,
+    "problem": "Connect everyday project operations with traceable financial records and approval workflows.",
+    "contribution": "Complete application development across frontend, APIs, database, and reporting.",
+    "outcome": "Projects, procurement, expenses, and payroll feed financial records and management dashboards in one application."
+  },
+  {
+    "slug": "eujobsconnect",
+    "title": "EUJobsConnect",
+    "description": "Staffing requests, private candidate matching, and employer portals.",
+    "overview": "A staffing platform connecting employers with a private worker pool through separate employer, worker, and admin portals.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Express.js",
+      "PostgreSQL",
+      "Stripe"
+    ],
+    "features": [
+      "Built staffing request tracking, skills-based candidate matching, private invitations, and controlled contact access.",
+      "Added Stripe payments and subscriptions, secure CV uploads, and email notifications.",
+      "Developed content management and AI-generated explanations to support human candidate review.",
+      "Handled application development and deployment."
+    ],
+    "github": "",
+    "live": "https://eujobsconnect.com/",
+    "featured": false,
+    "problem": "Manage employer requests and candidate review while controlling access to worker contact information.",
+    "contribution": "End-to-end frontend, backend, database, integrations, and deployment.",
+    "outcome": "Employers, workers, and staff use separate portals for request tracking, matching, and candidate review."
+  },
+  {
+    "slug": "optiqepx",
+    "title": "OptiqEPX",
+    "description": "AI study assistance, collaborative learning, and real-time quiz battles.",
+    "overview": "An AI learning platform combining study support, group learning, and gamified practice, built with a Next.js/React frontend, TypeScript APIs, and PostgreSQL.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "PostgreSQL",
+      "AI Integration",
+      "Background Jobs"
+    ],
+    "features": [
+      "Developed an AI study assistant, generated quizzes, and collaborative study rooms.",
+      "Built real-time quiz battles, tournaments, leaderboards, and progress dashboards.",
+      "Implemented document processing, job queues, authentication, and admin controls."
+    ],
+    "github": "",
+    "live": "https://optiqepx.com/",
+    "featured": false,
+    "problem": "Bring AI study help and collaborative practice into a shared learning experience.",
+    "contribution": "Complete product development across the frontend, TypeScript APIs, database, and background processing.",
+    "outcome": "Students can study with AI assistance, practice together, and track their progress through quizzes and tournaments."
+  },
+  {
+    "slug": "delegends-commerce",
+    "title": "DeLegends E-commerce",
+    "description": "Custom storefront, Stripe checkout, and order management.",
+    "overview": "A custom e-commerce platform connecting a Next.js storefront with Express/TypeScript APIs, PostgreSQL, and an admin dashboard for store operations.",
+    "technologies": [
+      "Next.js",
+      "TypeScript",
+      "Express.js",
+      "PostgreSQL",
+      "Stripe",
+      "AI Integration"
+    ],
+    "features": [
+      "Built catalog search and filtering, wishlists, cart, customer accounts, and Stripe checkout.",
+      "Developed order management, inventory controls, and payment/refund workflows.",
+      "Added memberships, loyalty rewards, and an AI shopping assistant.",
+      "Handled end-to-end application development and deployment."
+    ],
+    "github": "",
+    "live": "https://delegends.com/",
+    "featured": false,
+    "problem": "Connect the customer shopping experience with inventory, payments, and order operations.",
+    "contribution": "Full-stack application development and deployment, including storefront, admin tools, APIs, and integrations.",
+    "outcome": "Customers can shop and manage their accounts while staff manage products, inventory, orders, and payment workflows."
+  },
+  {
+    "slug": "delegends-barbershop",
+    "title": "DeLegends Barbershop",
+    "description": "Salon booking, multi-location calendars, and staff operations.",
+    "overview": "A custom salon booking platform with a Next.js customer website, React admin dashboard, React Native app, and TypeScript/PostgreSQL backend.",
+    "technologies": [
+      "Next.js",
+      "React",
+      "React Native",
+      "TypeScript",
+      "PostgreSQL"
+    ],
+    "features": [
+      "Built appointment booking, rescheduling, and cancellation workflows.",
+      "Developed multi-location calendars, barber working hours, availability, and receptionist booking tools.",
+      "Added role-based access, client history, appointment checkout, and payroll reports.",
+      "Integrated a product shop, loyalty rewards, gift cards, and AI hairstyle consultation."
+    ],
+    "github": "",
+    "live": "https://app.delegendsbarbershop.lt/",
+    "featured": true,
+    "problem": "Coordinate customer bookings, staff availability, and daily operations across salon locations.",
+    "contribution": "End-to-end development and deployment of the customer experience, admin tools, and backend.",
+    "outcome": "Customers manage appointments online, while staff coordinate calendars, checkout, client history, and payroll reporting."
+  },
+  {
     slug: "visual-source",
+    problem: "Coordinate match events, branded graphics, and social publishing for soccer clubs.",
+    contribution: "Full-stack platform development, graphic rendering, data synchronization, and deployment.",
+    outcome: "Clubs can log match events, generate graphics, and schedule social publishing from one workspace.",
     title: "Visual Source",
     description: "Real-time soccer match operations and social graphic automation.",
     overview:
@@ -66,7 +232,7 @@ export const projects: Project[] = [
     ],
     github: "",
     live: "https://www.everythinggreen.org/",
-    featured: true,
+    featured: false,
   },
   {
     slug: "career-dock",
@@ -88,7 +254,7 @@ export const projects: Project[] = [
     ],
     github: "",
     live: "https://careerdock.app",
-    featured: true,
+    featured: false,
   },
   {
     slug: "baby-care-store",

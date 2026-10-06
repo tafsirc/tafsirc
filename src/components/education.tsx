@@ -39,24 +39,28 @@ export function Education() {
               {
                 name: "Full Stack Software Developer",
                 issuer: "IBM / Coursera",
+                href: "https://www.coursera.org/account/accomplishments/specialization/5SFM8DFYF42P",
               },
               {
                 name: "Back-End Developer",
                 issuer: "Meta / Coursera",
+                href: "https://www.coursera.org/account/accomplishments/specialization/NN9JFTR8M3D8",
               },
               {
                 name: "Front-End Developer",
                 issuer: "Meta / Coursera",
+                href: "https://www.coursera.org/account/accomplishments/specialization/WV4TQ6TLE7Y6",
               },
               {
                 name: "AWS Fundamentals",
                 issuer: "AWS / Coursera",
+                href: "https://www.coursera.org/account/accomplishments/specialization/790A6Q46ZUY6",
               },
             ].map((cert) => (
               <div key={cert.name} className="border-b border-border pb-4 last:border-0 last:pb-0">
                 <div className="flex items-start gap-2 mb-1">
                   <span className="font-serif font-bold text-sm shrink-0 mt-0.5" style={{ color: "#34d399" }}>✓</span>
-                  <p className="text-foreground text-sm font-semibold font-sans leading-snug">{cert.name}</p>
+                  <a href={cert.href} target="_blank" rel="noopener noreferrer" className="text-foreground text-sm font-semibold font-sans leading-snug hover:underline">{cert.name} ↗</a>
                 </div>
                 <p className="dateline pl-5">{cert.issuer}</p>
               </div>

@@ -1,7 +1,8 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Github, Linkedin, Code } from "lucide-react";
+import { siteConfig } from "@/lib/site";
+import { Github, Linkedin, Code, ExternalLink } from "lucide-react";
 
 export function Footer() {
   const pathname = usePathname();
@@ -36,7 +37,8 @@ export function Footer() {
           <div className="flex items-center gap-4">
             {[
               { href: "https://github.com/tafsirc", icon: Github, label: "GitHub" },
-              { href: "https://linkedin.com/in/tafsirc", icon: Linkedin, label: "LinkedIn" },
+              { href: siteConfig.social.linkedin, icon: Linkedin, label: "LinkedIn" },
+              { href: siteConfig.social.upwork, icon: ExternalLink, label: "Upwork" },
               { href: "https://leetcode.com/u/tafsirc", icon: Code, label: "LeetCode" },
             ].map(({ href, icon: Icon, label }) => (
               <a

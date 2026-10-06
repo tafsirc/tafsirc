@@ -3,7 +3,7 @@ export const siteConfig = {
   title: "Tafsir Chowdhury | Full Stack AI Engineer",
   shortTitle: "Tafsir Chowdhury",
   description:
-    "Portfolio of Tafsir Chowdhury — Full Stack AI Engineer building multi-LLM pipelines, distributed systems, and production web apps with TypeScript, Node.js, Next.js, and AWS.",
+    "Portfolio of Tafsir Chowdhury — Full Stack AI Engineer building web products since 2022 with TypeScript, React, Node.js, Next.js, and applied AI. Explore research, ERP, staffing, sports, and commerce projects.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
     "https://tafsir.qom.bd",
@@ -28,6 +28,7 @@ export const siteConfig = {
   social: {
     github: "https://github.com/tafsirc",
     linkedin: "https://linkedin.com/in/tafsirc",
+    upwork: "https://www.upwork.com/freelancers/~01a150d13d45613490",
     leetcode: "https://leetcode.com/u/tafsirc",
     medium: "https://medium.com/@tafsirc",
   },

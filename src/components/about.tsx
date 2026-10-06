@@ -15,10 +15,11 @@ export function About() {
           <p className="dateline mb-6">By Tafsir Chowdhury &mdash; Dhaka, Bangladesh</p>
 
           <p className="drop-cap text-muted-foreground leading-relaxed text-[0.95rem] mb-4">
-            Backend-first by philosophy, full-stack by necessity. I have spent the
-            last three years writing the code that most users never see — the
-            worker queues, the retry logic, the LLM orchestration layers — the
-            infrastructure that makes products feel effortless.
+            I build complete web applications with TypeScript, React, Next.js, and
+            Node.js, from responsive interfaces to APIs, databases, and deployment.
+            Since 2022, I have worked on examination tools, AI research workflows,
+            and custom platforms that connect a customer experience with business
+            operations.
           </p>
           <p className="text-muted-foreground leading-relaxed text-[0.95rem] mb-4">
             At Standard Insights, I architect multi-phase AI pipelines using
@@ -28,7 +29,10 @@ export function About() {
             AI customer support platform powered by RAG and tool-calling agents.
           </p>
           <p className="text-muted-foreground leading-relaxed text-[0.95rem]">
-            I hold a Bachelor of Science in Computer Science from the University
+            Earlier, at Legal Fist, I built and deployed an online examination
+            platform with timed tests, automatic scoring, and student and admin
+            dashboards. I also contribute fixes and documentation to open-source
+            projects. I hold a Bachelor of Science in Computer Science from the University
             of the People (CGPA 3.67), and carry software engineering
             certifications from IBM, Meta, and AWS.
           </p>

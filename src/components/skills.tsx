@@ -10,7 +10,6 @@ export function Skills() {
       skills: [
         "JavaScript",
         "TypeScript",
-        "SQL",
         "React",
         "Next.js",
         "TanStack Query",
@@ -47,7 +46,7 @@ export function Skills() {
     },
     {
       category: "Database",
-      skills: ["PostgreSQL", "MongoDB", "MySQL"],
+      skills: ["SQL", "PostgreSQL", "MongoDB", "MySQL", "SQLite"],
     },
     {
       category: "DevOps & Cloud",

@@ -54,6 +54,7 @@ const personJsonLd = {
   sameAs: [
     siteConfig.social.github,
     siteConfig.social.linkedin,
+    siteConfig.social.upwork,
     siteConfig.social.leetcode,
     siteConfig.social.medium,
   ],

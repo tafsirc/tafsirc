@@ -1,3 +1,4 @@
+import { siteConfig } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -11,7 +12,8 @@ export function Contact() {
 
   const socials = [
     { label: "GitHub", href: "https://github.com/tafsirc" },
-    { label: "LinkedIn", href: "https://linkedin.com/in/tafsirc" },
+    { label: "LinkedIn", href: siteConfig.social.linkedin },
+    { label: "Upwork", href: siteConfig.social.upwork },
     { label: "LeetCode", href: "https://leetcode.com/u/tafsirc" },
     { label: "Medium", href: "https://medium.com/@tafsirc" },
   ];

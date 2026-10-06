@@ -111,6 +111,17 @@ export default async function ProjectDetailsPage({ params }: PageProps) {
         </CardContent>
       </Card>
 
+      {project.contribution && (
+        <Card className="mb-8">
+          <CardHeader><CardTitle>My Contribution</CardTitle></CardHeader>
+          <CardContent className="space-y-4 text-muted-foreground leading-relaxed">
+            {project.problem && <p><strong className="text-foreground">The problem: </strong>{project.problem}</p>}
+            <p><strong className="text-foreground">My role: </strong>{project.contribution}</p>
+            {project.outcome && <p><strong className="text-foreground">The result: </strong>{project.outcome}</p>}
+          </CardContent>
+        </Card>
+      )}
+
       {/* Key Features */}
       <Card className="mb-8">
         <CardHeader>
