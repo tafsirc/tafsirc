@@ -98,31 +98,31 @@ export const projects: Project[] = [
     "contribution": "End-to-end frontend, backend, database, integrations, and deployment.",
     "outcome": "Employers, workers, and staff use separate portals for request tracking, matching, and candidate review."
   },
-  {
-    "slug": "optiqepx",
-    "title": "OptiqEPX",
-    "description": "AI study assistance, collaborative learning, and real-time quiz battles.",
-    "overview": "An AI learning platform combining study support, group learning, and gamified practice, built with a Next.js/React frontend, TypeScript APIs, and PostgreSQL.",
-    "technologies": [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "PostgreSQL",
-      "AI Integration",
-      "Background Jobs"
-    ],
-    "features": [
-      "Developed an AI study assistant, generated quizzes, and collaborative study rooms.",
-      "Built real-time quiz battles, tournaments, leaderboards, and progress dashboards.",
-      "Implemented document processing, job queues, authentication, and admin controls."
-    ],
-    "github": "",
-    "live": "https://optiqepx.com/",
-    "featured": false,
-    "problem": "Bring AI study help and collaborative practice into a shared learning experience.",
-    "contribution": "Complete product development across the frontend, TypeScript APIs, database, and background processing.",
-    "outcome": "Students can study with AI assistance, practice together, and track their progress through quizzes and tournaments."
-  },
+  // {
+  //   "slug": "optiqepx",
+  //   "title": "OptiqEPX",
+  //   "description": "AI study assistance, collaborative learning, and real-time quiz battles.",
+  //   "overview": "An AI learning platform combining study support, group learning, and gamified practice, built with a Next.js/React frontend, TypeScript APIs, and PostgreSQL.",
+  //   "technologies": [
+  //     "Next.js",
+  //     "React",
+  //     "TypeScript",
+  //     "PostgreSQL",
+  //     "AI Integration",
+  //     "Background Jobs"
+  //   ],
+  //   "features": [
+  //     "Developed an AI study assistant, generated quizzes, and collaborative study rooms.",
+  //     "Built real-time quiz battles, tournaments, leaderboards, and progress dashboards.",
+  //     "Implemented document processing, job queues, authentication, and admin controls."
+  //   ],
+  //   "github": "",
+  //   "live": "https://optiqepx.com/",
+  //   "featured": false,
+  //   "problem": "Bring AI study help and collaborative practice into a shared learning experience.",
+  //   "contribution": "Complete product development across the frontend, TypeScript APIs, database, and background processing.",
+  //   "outcome": "Students can study with AI assistance, practice together, and track their progress through quizzes and tournaments."
+  // },
   {
     "slug": "delegends-commerce",
     "title": "DeLegends E-commerce",
